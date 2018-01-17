@@ -1,0 +1,128 @@
+<div class="tab_tit" ng-init="data.ac='product'">
+	<span ng-click="data.ac='product'" ng-class="{active:data.ac=='product'}">商品</span>
+	<span ng-click="data.ac='brand'" ng-class="{active:data.ac=='brand'}">品牌</span>
+	<span ng-click="data.ac='category'" ng-class="{active:data.ac=='category'}">分类</span>
+	<span ng-click="data.ac='zdy'" ng-class="{active:data.ac=='zdy'}">自定义外链接</span>
+</div>
+<div class="tab_con">
+	<!--商品-->
+	<div class="tab_con_item" ng-show="data.ac=='product'">
+		
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>商品</th>
+				<th></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>
+					<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+					<div class="goods_info">
+						<a class="goods_name">多发萨达萨达ddddd</a>
+						<p class="goods_style">尺码：32；颜色：橙色；</p>
+					</div>
+				</td>
+				<td><a class="selectCurrentProduct" href="">选取</a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>
+					<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+					<div class="goods_info">
+						<a class="goods_name">多发萨达萨达ddddd</a>
+						<p class="goods_style">尺码：32；颜色：橙色；</p>
+					</div>
+				</td>
+				<td><a class="selectCurrentProduct" href="">选取</a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>
+					<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+					<div class="goods_info">
+						<a class="goods_name">多发萨达萨达ddddd</a>
+						<p class="goods_style">尺码：32；颜色：橙色；</p>
+					</div>
+				</td>
+				<td><a class="selectCurrentProduct" href="">选取</a></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<!--品牌-->
+	<div class="tab_con_item" ng-show="data.ac=='brand'">
+		<div class="select_brand">
+			<div class="brand_letter">
+				<a class="brand_letter_item">A</a>
+				<a class="brand_letter_item">B</a>
+				<a class="brand_letter_item">C</a>
+				<a class="brand_letter_item">D</a>
+				<a class="brand_letter_item active">E</a>
+				<a class="brand_letter_item">F</a>
+				<a class="brand_letter_item">G</a>
+				<a class="brand_letter_item">H</a>
+				<a class="brand_letter_item">I</a>
+				<a class="brand_letter_item">J</a>
+				<a class="brand_letter_item">K</a>
+				<a class="brand_letter_item">L</a>
+				<a class="brand_letter_item">M</a>
+				<a class="brand_letter_item">N</a>
+				<a class="brand_letter_item">O</a>
+				<a class="brand_letter_item">P</a>
+				<a class="brand_letter_item">Q</a>
+				<a class="brand_letter_item">R</a>
+				<a class="brand_letter_item">S</a>
+				<a class="brand_letter_item">T</a>
+				<a class="brand_letter_item">U</a>
+				<a class="brand_letter_item">V</a>
+				<a class="brand_letter_item">W</a>
+				<a class="brand_letter_item">X</a>
+				<a class="brand_letter_item">Y</a>
+				<a class="brand_letter_item">Z</a>
+			</div>
+			<div class="brand_box">
+				<a class="brand_item">镜头</a>
+				<a class="brand_item active">镜头</a>
+				<a class="brand_item">镜头</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--分类-->
+	<div class="tab_con_item" ng-show="data.ac=='category'">
+		<div class="select_category">
+			<div class="category_box">
+				<a class="category_item">摄影摄像</a>
+				<a class="category_item">手机</a>
+				<a class="category_item">影音娱乐</a>
+			</div>
+			<div class="category_box">
+				<a class="category_item">数码相机</a>
+				<a class="category_item">单反相机</a>
+				<a class="category_item">镜头</a>
+			</div>
+		</div>
+	</div>
+	
+	<!--自定义-->
+	<div class="tab_con_item" ng-show="data.ac=='zdy'">
+		<div class="input_container">
+			<label class="input_description fl">自定义外链接:</label>
+			<div class="input_box">
+				<textarea></textarea>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+<div class="btn_box">
+	<button class="me-btn">保存</button>
+	<button class="me-btn">取消</button>
+</div>

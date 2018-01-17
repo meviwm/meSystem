@@ -1,0 +1,143 @@
+<div class="content_box" perfect-scrollbar wheel-propagation="false" wheel-speed="10" min-scrollbar-length="20">
+	<h1 class="page_tit">供应商</h1>
+	
+	<div class="operate_area clearfix">
+		<div class="search_btn fr">
+			<button class="me-btn"><i class="fa fa-search"></i>搜索</button>
+			<button ng-click="openModal('create')" class="me-btn"><i class="fa fa-plus"></i>创建</button>
+		</div>
+		<div class="operate_box c6">
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">供应商名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">供应商ID:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">供应商地址:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="contents">
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<th></th>
+				<th>ID</th>
+				<!--<th>产品名称</th>-->
+				<th>供应商名称</th>
+				<th>供应商地址</th>
+				<th>创建者</th>
+				<th>修改者</th>
+				<th class="sort_box" ng-click="data.s=!data.s">
+					创建时间
+					<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.s}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.s}"></i>
+					</span>
+				</th>
+				<th>修改时间</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>42</td>
+				<td>妆品亿欧蓉</td>
+				<td>成都现代之窗</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09</td>
+				<td>2016-12-12 09:09</td>
+				<td></td>
+				<td>
+					<a class="op_item" ng-click="openModal('edit')">修改</a>
+					<a class="op_item" ng-click="openModal('del')">禁用</a>
+					<a class="op_item" ng-click="openModal('recover')">启用</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>42</td>
+				<td>妆品亿欧蓉</td>
+				<td>成都现代之窗</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09</td>
+				<td>2016-12-12 09:09</td>
+				<td></td>
+				<td>
+					<a class="op_item" ng-click="openModal('edit')">修改</a>
+					<a class="op_item" ng-click="openModal('del')">禁用</a>
+					<a class="op_item" ng-click="openModal('recover')">启用</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>42</td>
+				<td>妆品亿欧蓉</td>
+				<td>成都现代之窗</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09</td>
+				<td>2016-12-12 09:09</td>
+				<td></td>
+				<td>
+					<a class="op_item" ng-click="openModal('edit')">修改</a>
+					<a class="op_item" ng-click="openModal('del')">禁用</a>
+					<a class="op_item" ng-click="openModal('recover')">启用</a>
+				</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td colspan="9">
+					<!-- 批量操作 -->
+					<div class="batch_operate_area clearfix fl">
+						<button class="me-btn fl" ng-click="openModal('edit')">修改</button>
+						<button class="me-btn fl" ng-click="openModal('del')">禁用</button>
+						<button class="me-btn fl" ng-click="openModal('recover')">启用</button>
+					</div>
+					<nav class="fr pagination_box">
+						<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+						<ul class="pagination fl">
+							<li><a href="#">&laquo;</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>
+					</nav>
+				</td>
+				<td></td>
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+
+
+</div>

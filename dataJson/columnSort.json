@@ -1,0 +1,5 @@
+[
+    {"id":0,"productName":"test0","productCategory":"包","productBrand":"gucci","skus":"1212","createDate":"2016-09-08"},
+    {"id":1,"productName":"test1","productCategory":"手袋","productBrand":"gucci","skus":"1212","createDate":"2016-09-08"},
+    {"id":2,"productName":"test2","productCategory":"围巾","productBrand":"gucci","skus":"1212","createDate":"2016-09-08"}
+]

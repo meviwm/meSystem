@@ -1,0 +1,68 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">创建后台用户</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 新增、修改 -->
+		<div class="createAdmin" ng-if="state=='add'||state=='edit'">
+			<div class="input_container">
+				<label class="input_description fl">账号</label>
+				<div class="input_box"><input type="text" ng-model="create.userId">
+				</div>
+			</div>
+			<div class="validate">
+				<p>不能为空</p>
+				<p>不能为空</p>
+				<p>不能为空</p>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">姓名</label>
+				<div class="input_box"><input type="text" ng-model="create.userName"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">密码</label>
+				<div class="input_box"><input type="password" ng-model="create.userPSW"></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 禁用 -->
+		<div class="editAdmin" ng-if="state=='del'">
+			<p class="opt_text">是否禁用该用户登陆？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 设置角色 -->
+		<div class="editAdmin" ng-if="state=='set'">
+			<div class="role_box">
+				<label class="role_item"><input name="role" type="radio"><span>超级管理员</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>普通用户管理角色</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>后台用户管理员角色</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>栏目管理角色</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>商品管理角色</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>销售管理角色</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>系统参数管理角色</span></label>
+				<label class="role_item"><input name="role" type="radio"><span>供应商管理员</span></label>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 恢复 -->
+		<div class="editAdmin" ng-if="state=='recover'">
+			<p class="opt_text">是否恢复该用户登陆？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+	</div>
+</div>

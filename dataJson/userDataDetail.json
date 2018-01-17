@@ -1,0 +1,109 @@
+{
+  "header": {
+    "flag": 1
+  },
+  "content": {
+    "address": "",
+    "createDate": "2017-02-05 14:12:46",
+    "email": "",
+    "genderDesc": "男",
+    "headerPath": "/vandafile/user/picture/default_header.jpg",
+    "id": 5,
+    "lastLoginDate": "2017-02-06 09:31:29",
+    "modifierName": "",
+    "modifyDate": "2017-02-06 13:19:11",
+    "name": "1111",
+    "nickName": "test",
+    "password": "9816f82925dfe9fac9464131527a0f2aae61891d",
+    "realName": "test",
+    "sex": 1,
+    "status": 2,
+    "statusDesc": "禁用",
+    "statusDescHtml": "<font color='red'>禁用</font>",
+    "telephone": "",
+    "userPointsTo": {
+      "id": 2,
+      "pointsLogTos": [
+        {
+          "comment": "注册",
+          "id": 2,
+          "operateDate": "2017-02-05 14:12:46",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": 10,
+          "pointsOperateTypeDesc": "注册",
+          "pointsOperateTypeIndex": 1,
+          "userPointsId": 2
+        },
+        {
+          "comment": "登陆",
+          "id": 3,
+          "operateDate": "2017-02-05 14:19:16",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": 10,
+          "pointsOperateTypeDesc": "登录|签到",
+          "pointsOperateTypeIndex": 2,
+          "userPointsId": 3
+        },
+        {
+          "comment": "登陆",
+          "id": 4,
+          "operateDate": "2017-02-05 14:20:17",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": 10,
+          "pointsOperateTypeDesc": "登录|签到",
+          "pointsOperateTypeIndex": 2,
+          "userPointsId": 4
+        },
+        {
+          "comment": "登陆",
+          "id": 5,
+          "operateDate": "2017-02-05 14:28:39",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": 10,
+          "pointsOperateTypeDesc": "登录|签到",
+          "pointsOperateTypeIndex": 2,
+          "userPointsId": 5
+        },
+        {
+          "comment": "add",
+          "id": 6,
+          "operateDate": "2017-02-05 15:53:59",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": 1,
+          "pointsOperateTypeDesc": "客服发放",
+          "pointsOperateTypeIndex": 20,
+          "userPointsId": 6
+        },
+        {
+          "comment": "-add",
+          "id": 7,
+          "operateDate": "2017-02-05 15:56:47",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": -1,
+          "pointsOperateTypeDesc": "客服扣除",
+          "pointsOperateTypeIndex": 21,
+          "userPointsId": 7
+        },
+        {
+          "comment": "登陆",
+          "id": 8,
+          "operateDate": "2017-02-06 09:31:29",
+          "operatorId": 5,
+          "operatorName": "test",
+          "pointsNumber": 10,
+          "pointsOperateTypeDesc": "登录|签到",
+          "pointsOperateTypeIndex": 2,
+          "userPointsId": 8
+        }
+      ],
+      "pointsNumber": 50,
+      "userId": 5
+    }
+  }
+}

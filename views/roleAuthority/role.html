@@ -1,0 +1,122 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">角色管理</h1>
+	<!-- 最多允许5个搜索项 -->
+	<div class="operate_area container-fluid">
+		<div class="row clearfix">
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">权限名:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">是否删除:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<button class="me-btn fl"><i class="fa fa-search"></i>搜索</button>
+			<a class="me-btn fr" ui-sref="me.createRole"><i class="fa fa-plus"></i>新增</a>
+		</div>
+	</div>
+	
+	
+	<div class="contents">
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<th width="28px"></th>
+				<th width="75px">ID</th>
+				<th>角色名称</th>
+				<th>创建人</th>
+				<th width="160px">创建时间</th>
+				<th>修改人</th>
+				<th width="160px">修改时间</th>
+				<th>状态</th>
+				<th>是否删除</th>
+				<th>备注</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>888888</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>超级管理员</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>正常</td>
+				<td>正常</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ui-sref="me.createRole">修改</a>
+					<a class="op_item" ng-click="createAdmin('delete')">删除</a>
+					<a class="op_item" ng-click="createAdmin('del')">禁用</a>
+					<a class="op_item" ng-click="createAdmin('set')">启用</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>888888</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>超级管理员</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>正常</td>
+				<td>正常</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ui-sref="me.createRole">修改</a>
+					<a class="op_item" ng-click="createAdmin('delete')">删除</a>
+					<a class="op_item" ng-click="createAdmin('del')">禁用</a>
+					<a class="op_item" ng-click="createAdmin('set')">启用</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>888888</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>超级管理员</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>正常</td>
+				<td>正常</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ui-sref="me.createRole">修改</a>
+					<a class="op_item" ng-click="createAdmin('delete')">删除</a>
+					<a class="op_item" ng-click="createAdmin('del')">禁用</a>
+					<a class="op_item" ng-click="createAdmin('recover')">启用</a>
+				</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td colspan="9">
+					<!-- 批量操作 -->
+					<div class="batch_operate_area clearfix fl">
+						<!--<button class="me-btn fl"  ng-click="createAdmin('edit')">修改</button>-->
+						<button class="me-btn fl" ng-click="createAdmin('delete')">删除</button>
+						<button class="me-btn fl" ng-click="createAdmin('del')">禁用</button>
+						<button class="me-btn fl" ng-click="createAdmin('recover')">启用</button>
+					</div>
+					<nav class="fr pagination_box">
+						<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+						<ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+					</nav>
+				</td>
+				<td></td>
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+
+</div>

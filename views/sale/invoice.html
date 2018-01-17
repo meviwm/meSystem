@@ -1,0 +1,119 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">发货单</h1>
+	
+	<!-- 最多允许5个搜索项 -->
+	<div class="operate_area clearfix">
+		<div class="search_btn fr">
+			<button class="me-btn"><i class="fa fa-search"></i>搜索</button>
+			<!--<button class="me-btn" ng-click="createAdmin('add')"><i class="fa fa-plus"></i>新增</button>-->
+		</div>
+		<div class="operate_box">
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">发货单号:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">采购单号:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">运单号:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">创建日期:</label>
+				<div class="input_box">
+					<input type="text" uib-datepicker-popup="yyyy-MM" ng-model="DateDayStart" show-button-bar="false"
+						   datepicker-options="{minMode:'month'}" is-open="d.t" ng-focus="d.t=!d.t">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">到&nbsp;&nbsp;</label>
+				<div class="input_box">
+					<input type="text" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false"
+						   datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-focus="d.e=!d.e">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="contents">
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<!--<th width="28px"></th>-->
+				<th>发货单号</th>
+				<th>采购单号</th>
+				<th>运单号</th>
+				<th>承运商</th>
+				<th>发货单总金额</th>
+				<th>发货时间</th>
+				<th>创建人</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>2017011200147-1</td>
+				<td>2017011200147</td>
+				<td>778156391049</td>
+				<td>FedEx</td>
+				<td>721.31</td>
+				<td>2017-01-12 00:00:00</td>
+				<td>mossadmin</td>
+				<td>
+					<a class="op_item" ui-sref="me.invoiceDetails">查看详情</a>
+					<a class="op_item" ui-sref="me.editInvoiceInfo">回填信息</a>
+				</td>
+			</tr>
+			<tr>
+				<td>2017011200147-1</td>
+				<td>2017011200147</td>
+				<td>778156391049</td>
+				<td>FedEx</td>
+				<td>721.31</td>
+				<td>2017-01-12 00:00:00</td>
+				<td>mossadmin</td>
+				<td>
+					<a class="op_item" ui-sref="me.invoiceDetails">查看详情</a>
+					<a class="op_item" ui-sref="me.editInvoiceInfo">回填信息</a>
+				</td>
+			</tr>
+			<tr>
+				<td>2017011200147-1</td>
+				<td>2017011200147</td>
+				<td>778156391049</td>
+				<td>FedEx</td>
+				<td>721.31</td>
+				<td>2017-01-12 00:00:00</td>
+				<td>mossadmin</td>
+				<td>
+					<a class="op_item" ui-sref="me.invoiceDetails">查看详情</a>
+					<a class="op_item" ui-sref="me.editInvoiceInfo">回填信息</a>
+				</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<!--<td>&lt;!&ndash;<input type="checkbox">&ndash;&gt;</td>-->
+				<td colspan="9">
+					<!-- 批量操作 -->
+					<div class="batch_operate_area clearfix fl">
+						<!--<button class="me-btn fl">导出表格</button>-->
+						<!--<button class="me-btn fl">恢复</button>-->
+						<!--<button class="me-btn fl">重置</button>-->
+					</div>
+					<nav class="fr pagination_box">
+						<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+						<ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+					</nav>
+				</td>
+				<td></td>
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+
+</div>

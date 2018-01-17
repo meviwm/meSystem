@@ -1,0 +1,135 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">回填发货单信息 <a class="fr return_page" ng-click="returnPage()">返回</a></h1>
+	
+	<!-- 最多允许5个搜索项 -->
+	<div class="operate_area clearfix">
+		<div class="operate_box">
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">采购单号:</label>
+				<div class="input_box"><p class="val_text">2017010900105</p></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">发货单号:</label>
+				<div class="input_box"><p class="val_text">2017010900105-1</p></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">供应商名字</label>
+				<div class="input_box"><p class="val_text">IKONIC SRL</p></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">发货单总金额</label>
+				<div class="input_box"><p class="val_text">¥737.70</p></div>
+			</div>
+		</div>
+		<div class="operate_box">
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">承运商:</label>
+				<div class="input_box">
+					<select>
+						<option>asaasssda</option>
+						<option>asaasssda</option>
+						<option>asaasssda</option>
+						<option>asaasssda</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">运单号:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">发货日期:</label>
+				<div class="input_box">
+					<input type="text" uib-datepicker-popup="yyyy-MM" ng-model="DateDayStart" show-button-bar="false"
+						   datepicker-options="{minMode:'month'}" is-open="d.t" ng-focus="d.t=!d.t">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">关税</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">港杂费</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">运费</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">国内物流编号</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="btn_box">
+			<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+			<button class="me-btn" ng-click="closeModal()">取消</button>
+		</div>
+		
+	</div>
+	
+	<div class="contents">
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<th>商品ID</th>
+				<th>商品名称</th>
+				<th>图片</th>
+				<th>销售属性</th>
+				<th>售价</th>
+				<th>购买数量</th>
+				<th>所属平台</th>
+				<th>小计</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>24197</td>
+				<td>PRADA HANDBAGS Nero</td>
+				<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+				<td>颜色:黑色 ,尺码:U</td>
+				<td>737.7</td>
+				<td>737.7</td>
+				<td>1</td>
+				<td>studi69</td>
+				<td>737.7</td>
+			</tr>
+			<tr>
+				<td>24197</td>
+				<td>PRADA HANDBAGS Nero</td>
+				<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+				<td>颜色:黑色 ,尺码:U</td>
+				<td>737.7</td>
+				<td>737.7</td>
+				<td>1</td>
+				<td>studi69</td>
+				<td>737.7</td>
+			</tr>
+			<tr>
+				<td>24197</td>
+				<td>PRADA HANDBAGS Nero</td>
+				<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+				<td>颜色:黑色 ,尺码:U</td>
+				<td>737.7</td>
+				<td>737.7</td>
+				<td>1</td>
+				<td>studi69</td>
+				<td>737.7</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>

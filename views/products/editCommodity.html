@@ -1,0 +1,61 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">商品修改</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='del'">
+			<p class="opt_text">是否删除该商品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 发布 -->
+		<div class="editAdmin" ng-if="state=='issue'">
+			<p class="opt_text">该商品发布后将不能删除，是否确认发布？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 修改库存 -->
+		<div class="editAdmin" ng-if="state=='stock'">
+			<div class="input_container">
+				<label class="input_description fl">库存量:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 上架 -->
+		<div class="editAdmin" ng-if="state=='shelves'">
+			<div class="input_container fl">
+				<label class="input_description fl">上架日期:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl">
+				<label class="input_description fl">下架日期:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 下架 -->
+		<div class="editAdmin" ng-if="state=='offShelves'">
+			<p class="opt_text">是否对该商品进行强制下架，下架后用户不能进行购买？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+	
+	</div>
+</div>

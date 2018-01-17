@@ -1,0 +1,138 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">权限编辑</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 修改 -->
+		<div class="editAdmin" ng-if="state=='edit'">
+			<div class="input_container">
+				<label class="input_description fl">权限名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">权限类型:</label>
+				<div class="input_box">
+					<select>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">权限分类:</label>
+				<div class="input_box">
+					<select>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">权限串:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">备注:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 新增 -->
+		<div class="editAdmin" ng-if="state=='create'">
+			<div class="input_container">
+				<label class="input_description fl">权限名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">权限类型:</label>
+				<div class="input_box">
+					<select>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">权限分类:</label>
+				<div class="input_box">
+					<select>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">权限串:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+						<option>dsaas</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">备注:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='delete'">
+			<p class="opt_text">您是否要删除本条数据？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='del'">
+			<p class="opt_text">您是否要进行此操作？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 恢复 -->
+		<div class="editAdmin" ng-if="state=='recover'">
+			<p class="opt_text">您是否要进行此操作？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+	
+	</div>
+</div>

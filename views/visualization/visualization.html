@@ -1,0 +1,260 @@
+<div class="content_box">
+	<div class="visualization_container">
+		<div class="phone_views fl">
+			<header class="phone_header">
+				<div class="status_bar">
+					<div class="signal fl"><i></i><i></i><i></i><i></i><i></i></div>
+					<div class="charge fr"><span>69%</span><i></i></div>
+					<div class="time">08:09</div>
+				</div>
+				<div class="navigation_bar">
+					<div class="header_btn fl">
+						<a href="" class="return_prev_page">返回</a>
+					</div>
+					<div class="header_btn fr"></div>
+					<div class="header_tit">商品详情</div>
+				</div>
+			</header>
+			<div class="phone_body" ng-scrollbars ng-scrollbars-config="scrollbarsConfig" id="phoneBody">
+				<div class="phoneGoodsImg">
+					<img src="images/phone_img.jpg" alt="">
+				</div>
+				<div class="phoneGoodsInfor">
+					<h6 class="phoneGoodsTit">你是一只蜻蜓，点过我的湖心</h6>
+					<p class="phoneGoodsPrice"><span>￥</span><em>3500.00</em></p>
+				</div>
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail'}" ng-click="editCurrentColumn('detail')">-->
+				<div class="userDefinedColumn activeColumn">
+					<div class="defaultC">
+						<p class="userDefinedColumnName">商品详情</p>
+						<p class="operatePrompt">点击进行编辑</p>
+					</div>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<!--<span>删除</span>-->
+							<span>添加栏目</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="userDefinedColumn" ng-repeat="item in addColumnList" data-style-view="{{item.editTmpSrc}}">
+					<div class="defaultC" ng-include="item.conTmpSrc">
+						<p class="userDefinedColumnName">商品详情</p>
+						<p class="operatePrompt">点击进行编辑</p>
+					</div>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span ng-click="deleteColumn(item.cid)">删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail2'}" ng-click="editCurrentColumn('detail2')">-->
+				<!--<div class="userDefinedColumn">
+					<style>
+						.goodsLists{overflow:hidden;margin:15px 0;}
+						.goodsItem{padding:10px;border-bottom:1px solid #dedede;overflow:hidden;}
+						.goodsImg{overflow:hidden;float:left;width:92px;height:92px;margin-right:10px;}
+						.goodsImg img{display:block;width:100%;height:100%;}
+						.goodsInfo{overflow:hidden;}
+						.goodsName{margin:0 0 20px 0;line-height:20px;font-size:14px;color:#353535;height:40px;overflow:hidden;}
+						.goodsPrice{float:left;color:#ff3500;margin:0;line-height:32px;}
+						.buyGoods{float:right;border:1px solid #ff3500;color:#ff3500;font-size:14px;padding:0 10px;height:32px;line-height:30px;}
+					</style>
+					<div class="goodsListBox">
+						<ul class="goodsLists">
+							<li class="goodsItem">
+								<a href="" class="goodsImg"><img src="images/200_200.jpg" alt=""></a>
+								<div class="goodsInfo">
+									<p class="goodsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+									<p class="goodsPrice">￥99.99</p>
+									<a href="" class="buyGoods">加入购物车</a>
+								</div>
+							</li>
+							<li class="goodsItem">
+								<a href="" class="goodsImg"><img src="images/200_200.jpg" alt=""></a>
+								<div class="goodsInfo">
+									<p class="goodsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+									<p class="goodsPrice">￥99.99</p>
+									<a href="" class="buyGoods">加入购物车</a>
+								</div>
+							</li>
+							<li class="goodsItem">
+								<a href="" class="goodsImg"><img src="images/200_200.jpg" alt=""></a>
+								<div class="goodsInfo">
+									<p class="goodsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+									<p class="goodsPrice">￥99.99</p>
+									<a href="" class="buyGoods">加入购物车</a>
+								</div>
+							</li>
+						</ul>
+						
+					</div>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail2'}" ng-click="editCurrentColumn('detail2')">-->
+				<!--<div class="userDefinedColumn">
+					<style>
+						.goodsList_horizontal .goodsLists{margin:15px 5px;}
+						.goodsList_horizontal .goodsItem{border-bottom:0;float:left;width:50%;overflow:hidden;padding:5px;margin:5px 0;}
+						.goodsList_horizontal .goodsImg{float:none;display:block;width:100%;height:auto;margin-right:0;padding:10px;border:1px solid #dedede;border-bottom:0;}
+						.goodsList_horizontal .goodsImg img{display:block;width:100%;height:auto;}
+						.goodsList_horizontal .goodsInfo{overflow:hidden;border:1px solid #dedede;border-top:0;padding:10px;}
+						.goodsList_horizontal .goodsName{margin-bottom:0;}
+						.goodsList_horizontal .goodsPrice{float:none;}
+						.goodsList_horizontal .buyGoods{float:none;display:block;border:1px solid #ff3500;text-align:center;}
+					</style>
+					<div class="goodsListBox goodsList_horizontal">
+						<ul class="goodsLists">
+							<li class="goodsItem">
+								<a href="" class="goodsImg"><img src="images/200_200.jpg" alt=""></a>
+								<div class="goodsInfo">
+									<p class="goodsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+									<p class="goodsPrice">￥99.99</p>
+									<a href="" class="buyGoods">加入购物车</a>
+								</div>
+							</li>
+							<li class="goodsItem">
+								<a href="" class="goodsImg"><img src="images/200_200.jpg" alt=""></a>
+								<div class="goodsInfo">
+									<p class="goodsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+									<p class="goodsPrice">￥99.99</p>
+									<a href="" class="buyGoods">加入购物车</a>
+								</div>
+							</li>
+							<li class="goodsItem">
+								<a href="" class="goodsImg"><img src="images/200_200.jpg" alt=""></a>
+								<div class="goodsInfo">
+									<p class="goodsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+									<p class="goodsPrice">￥99.99</p>
+									<a href="" class="buyGoods">加入购物车</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail3'}" ng-click="editCurrentColumn('detail3')">-->
+				<!--<div class="userDefinedColumn">
+					<p class="userDefinedColumnName">商品列表</p>
+					<p class="operatePrompt">点击进行编辑</p>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail4'}" ng-click="editCurrentColumn('detail4')">-->
+				<!--<div class="userDefinedColumn">
+					<p class="userDefinedColumnName">图片广告</p>
+					<p class="operatePrompt">点击进行编辑</p>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail5'}" ng-click="editCurrentColumn('detail5')">-->
+				<!--<div class="userDefinedColumn">
+					<p class="userDefinedColumnName">图片导航</p>
+					<p class="operatePrompt">点击进行编辑</p>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail5'}" ng-click="editCurrentColumn('detail5')">-->
+				<!--<div class="userDefinedColumn">
+					<p class="userDefinedColumnName">文本导航</p>
+					<p class="operatePrompt">点击进行编辑</p>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--<div class="userDefinedColumn" ng-class="{activeColumn:currentColumn =='detail5'}" ng-click="editCurrentColumn('detail5')">-->
+				<!--<div class="userDefinedColumn">
+					<p class="userDefinedColumnName">橱窗</p>
+					<p class="operatePrompt">点击进行编辑</p>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span>删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>-->
+				
+				<p>{{settingsStyle}}</p>
+				
+				<div class="allUserDefinedColumn">
+					<ul class="userDefinedColumnList">
+						<li class="userDefinedColumnItem" ng-click="addColumn('views/visualization/conTmp/goodsList/view.html','views/visualization/editTmp/goodsList/settingStyle.html')"><span>商品</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('views/visualization/conTmp/goodsList/view.html','views/visualization/editTmp/goodsList/view.html')"><span>商品列表</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('views/visualization/conTmp/imgAdvertC/view.html','views/visualization/editTmp/imgAdvertC/view.html')"><span>图片广告</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('views/visualization/conTmp/imgNavC/view.html','views/visualization/editTmp/imgNavC/view.html')"><span>图片导航</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('views/visualization/conTmp/textNavC/view.html','views/visualization/editTmp/textNavC/view.html')"><span>文本导航</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('views/visualization/conTmp/windowC/view.html','views/visualization/editTmp/windowC/view.html')"><span>橱窗</span></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!--<div class="arrow"></div>-->
+		<div class="edit_views_container">
+			<div class="edit_operate_region fl">
+				<div class="arrow" id="arrow">
+					<span class="arrow1"></span>
+					<span class="arrow2"></span>
+				</div>
+				<div class="editContentContainer" ng-scrollbars ng-scrollbars-config="scrollbarsConfig">
+					<div ng-include="settingsStyle"></div>
+				</div>
+				
+			</div>
+			<!--栏目内容选择-->
+			<div class="edit_con_region">
+				<div class="conBox" ng-scrollbars ng-scrollbars-config="scrollbarsConfig">
+					<div ng-include="editContent"></div>
+				</div>
+			</div>
+			<!--<div class="edit_views_box" ng-scrollbars ng-scrollbars-config="scrollbarsConfig">
+				
+			</div>-->
+		</div>
+	</div>
+</div>

@@ -1,0 +1,212 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">商品管理</h1>
+	
+	<div class="operate_area container-fluid">
+		<div class="row clearfix">
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">账号:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">姓名:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix select_time">
+				<!--<div class="input_container fl clearfix select_time">-->
+				<label class="input_description fl">创建日期:</label>
+				<div class="input_box clearfix se_time">
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.es" ng-click="d.es=!d.es">
+					<span class="fl time_se"> - </span>
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+				</div>
+				<!--</div>-->
+			</div>
+			<!--<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">创建日期:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>-->
+			<button class="me-btn fl"><i class="fa fa-search"></i>搜索</button>
+			<button class="me-btn fr" ng-click="createAdmin('add')"><i class="fa fa-plus"></i>新增</button>
+			<!--<div class="search_btn fl">
+			</div>-->
+		</div>
+	</div>
+	
+	<!--<div class="operate_area clearfix">
+		<div class="search_btn fr">
+			<button class="me-btn"><i class="fa fa-search"></i>搜索</button>
+			<a ui-sref="me.addProducts" class="me-btn"><i class="fa fa-plus"></i>创建</a>
+		</div>
+		<div class="operate_box c6">
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">产品名:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">商品ID:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">产品分类:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">品牌:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">创建日期:</label>
+				<div class="input_box">
+					<input type="text" uib-datepicker-popup="yyyy-MM" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'month'}" is-open="d.t"  ng-focus="d.t=!d.t">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">到&nbsp;&nbsp;</label>
+				<div class="input_box">
+					<input type="text" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e"  ng-focus="d.e=!d.e">
+				</div>
+			</div>
+		</div>
+	</div>-->
+	
+	<div class="contents">
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<th></th>
+				<th>ID</th>
+				<th>产品名称</th>
+				<th>商品规格</th>
+				<th class="sort_box" ng-click="data.s=!data.s">
+					是否现货
+					<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.s}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.s}"></i>
+					</span>
+				</th>
+				<th>库存</th>
+				<th>类型</th>
+				<th class="sort_box" ng-click="data.s2=!data.s2">
+					品牌
+					<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.s2}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.s2}"></i>
+					</span>
+				</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>717</td>
+				<td>LANCASTER 水桶包 米白色 42218CHAMPAGNE</td>
+				<td>米白色 U</td>
+				<td>非现货</td>
+				<td>3<a class="edit_stock fr" ng-click="openModal('stock')">修改</a></td>
+				<td>SHOULDER BAGS</td>
+				<td>LANCASTER</td>
+				<td>
+					<a class="op_item" ui-sref="me.editCommodityAll">修改</a>
+					<a class="op_item" ng-click="openModal('del')">删除</a>
+					<a class="op_item" ng-click="openModal('issue')">发布</a>
+					<a class="op_item" ng-click="openModal('shelves')">上架</a>
+					<!--<a class="op_item" ng-click="openModal('offShelves')">下架</a>-->
+					<a class="op_item" ui-sref="me.CommodityDetails">详情</a>
+				</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td colspan="7">
+					<!-- 批量操作 -->
+					<div class="batch_operate_area clearfix fl">
+						<button class="me-btn fl" ng-click="openModal('del')">删除</button>
+						<button class="me-btn fl" ng-click="openModal('issue')">发布</button>
+						<!--<button class="me-btn fl" ng-click="openModal('shelves')">下架</button>-->
+						<!--<button class="me-btn fl" ng-click="openModal('offShelves')">上架</button>-->
+					</div>
+					<nav class="fr pagination_box">
+						<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+						<ul class="pagination fl">
+							<li><a href="#">&laquo;</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>
+					</nav>
+				</td>
+				<td></td>
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+
+
+</div>

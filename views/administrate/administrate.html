@@ -1,0 +1,280 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">后台用户管理</h1>
+	<!-- 最多允许5个搜索项 -->
+	<div class="operate_area container-fluid">
+		<div class="row clearfix">
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">账号:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">姓名:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix select_time">
+				<!--<div class="input_container fl clearfix select_time">-->
+					<label class="input_description fl">创建日期:</label>
+					<div class="input_box clearfix se_time">
+						<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="true" datepicker-options="" is-open="d.es" ng-click="d.es=!d.es">
+						<span class="fl time_se"> - </span>
+						<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minDate:DateDayStart}" is-open="d.e" ng-click="d.e=!d.e">
+					</div>
+				<!--</div>-->
+			</div>
+			<!--<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">创建日期:</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>-->
+			<button class="me-btn fl"><i class="fa fa-search"></i>搜索</button>
+			<button class="me-btn fr" ng-click="createAdmin('add')"><i class="fa fa-plus"></i>新增</button>
+			<!--<div class="search_btn fl">
+			</div>-->
+		</div>
+	</div>
+	
+	
+	<!-- 最多允许5个搜索项 -->
+	<!--<div class="operate_area clearfix">
+		<div class="search_btn fr">
+			<button class="me-btn"><i class="fa fa-search"></i>搜索</button>
+			<button class="me-btn" ng-click="createAdmin('add')"><i class="fa fa-plus"></i>新增</button>
+		</div>
+		<div class="operate_box">
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">账号:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">姓名:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">状态:</label>
+				<div class="input_box">
+					<select>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+						<option>aaa</option>
+					</select>
+				</div>
+			</div>
+			&lt;!&ndash;<div class="input_container fl clearfix">
+				<label class="input_description fl">创建日期:</label>
+				&lt;!&ndash;<i class="fa fa-calendar select_time_icon fr" ng-click="d.t=!d.t"></i>&ndash;&gt;
+				&lt;!&ndash; alt-input-formats：手动输入接受的格式；uib-datepicker-popup：显示日期的格式；datepicker-options：设置选择年月还是年月日； &ndash;&gt;
+				<div class="input_box">
+					<input type="text" readonly alt-input-formats="yyyy-MM" uib-datepicker-popup="yyyy-MM" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'month'}" is-open="d.t" ng-click="d.t=!d.t">
+				</div>
+			</div>
+			<div class="input_container fl clearfix">
+				<label class="input_description fl">到&nbsp;&nbsp;</label>
+				&lt;!&ndash;<i class="fa fa-calendar select_time_icon fr" ng-click="d.e=!d.e"></i>&ndash;&gt;
+				<div class="input_box">
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+				</div>
+			</div>&ndash;&gt;
+			
+			<div class="input_container fl clearfix select_time">
+				<label class="input_description fl">创建日期:</label>
+				<div class="input_box clearfix se_time">
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.es" ng-click="d.es=!d.es">
+					<span class="fl time_se"> - </span>
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+				</div>
+			</div>
+			
+		</div>
+	</div>-->
+	
+	<div class="contents">
+		<table class="table my_table">
+			<thead>
+			<tr>
+				<th width="28px"></th>
+				<th width="75px">ID</th>
+				<th>账号</th>
+				<th>姓名</th>
+				<th width="160px">注册时间</th>
+				<th width="160px">修改时间</th>
+				<th>修改人</th>
+				<th>创建人</th>
+				<th width="160px">最后登录时间</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>888888</td>
+				<td>ylmf</td>
+				<td>雨林木风</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09:00</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ng-click="createAdmin('edit')">修改</a>
+					<a class="op_item" ng-click="createAdmin('del')">禁用</a>
+					<!--<a class="op_item">恢复</a>-->
+					<a class="op_item" ng-click="createAdmin('set')">设置角色</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>0</td>
+				<td>ylmf</td>
+				<td>雨林木风</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09:00</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ng-click="createAdmin('edit')">修改</a>
+					<!--<a class="op_item" ng-click="createAdmin('del')">禁用</a>-->
+					<a class="op_item" ng-click="createAdmin('recover')">恢复</a>
+					<!--<a class="op_item">恢复</a>-->
+					<a class="op_item" ng-click="createAdmin('set')">设置角色</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>0</td>
+				<td>ylmf</td>
+				<td>雨林木风</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09:00</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ng-click="createAdmin('edit')">修改</a>
+					<!--<a class="op_item" ng-click="createAdmin('del')">禁用</a>-->
+					<a class="op_item" ng-click="createAdmin('recover')">恢复</a>
+					<!--<a class="op_item">恢复</a>-->
+					<a class="op_item" ng-click="createAdmin('set')">设置角色</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>0</td>
+				<td>ylmf</td>
+				<td>雨林木风</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09:00</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ng-click="createAdmin('edit')">修改</a>
+					<!--<a class="op_item" ng-click="createAdmin('del')">禁用</a>-->
+					<a class="op_item" ng-click="createAdmin('recover')">恢复</a>
+					<!--<a class="op_item">恢复</a>-->
+					<a class="op_item" ng-click="createAdmin('set')">设置角色</a>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>0</td>
+				<td>ylmf</td>
+				<td>雨林木风</td>
+				<td>2016-09-08 18:12:00</td>
+				<td>2016-09-09 09:08:00</td>
+				<td>超级管理员</td>
+				<td>超级管理员</td>
+				<td>2016-12-12 09:09:00</td>
+				<td>正常</td>
+				<td>
+					<a class="op_item" ng-click="createAdmin('edit')">修改</a>
+					<!--<a class="op_item" ng-click="createAdmin('del')">禁用</a>-->
+					<a class="op_item" ng-click="createAdmin('recover')">恢复</a>
+					<!--<a class="op_item">恢复</a>-->
+					<a class="op_item" ng-click="createAdmin('set')">设置角色</a>
+				</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td colspan="9">
+					<!-- 批量操作 -->
+					<div class="batch_operate_area clearfix fl">
+						<!--<button class="me-btn fl"  ng-click="createAdmin('edit')">修改</button>-->
+						<button class="me-btn fl" ng-click="createAdmin('del')">禁用</button>
+						<button class="me-btn fl" ng-click="createAdmin('recover')">恢复</button>
+						<button class="me-btn fl" ng-click="createAdmin('set')">设置角色</button>
+					</div>
+					<nav class="fr pagination_box">
+						<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+						<!--<ul class="pagination fl">
+							<li><a href="#">&laquo;</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>-->
+						<ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+					</nav>
+				</td>
+				<td></td>
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+	
+</div>

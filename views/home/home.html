@@ -1,0 +1,176 @@
+<div class="content_box" ng-scrollbars>
+	<h1>home</h1>
+	<h3><a ui-sref="me.ylmf">ylmf</a></h3>
+	
+	<p>select 自适应选择布局{{selected.brandLater}}</p>
+	<div class="input_container">
+		<label class="input_description fl">品牌</label>
+		<div class="input_box">
+			<button class="reset_select_val fr" type="button" ng-click="selected.brandLater = undefined">
+				<i class="fa fa-trash-o"></i>
+			</button>
+			<div class="select_me select_me_display">
+				<ui-select ng-model="selected.brandLater" append-to-body="true" theme="select2"
+						   reset-searchI-input="true">
+					<ui-select-match placeholder="请选择">
+						<span ng-bind="$select.selected.name"></span>
+					</ui-select-match>
+					<ui-select-choices
+							repeat="item in (itemArray | filter: $select.search) track by item.id">
+						<span ng-bind="item.name"></span>
+					</ui-select-choices>
+					<ui-select-no-choice>
+						Dang! We couldn't find any choices...
+					</ui-select-no-choice>
+				</ui-select>
+			</div>
+		</div>
+	</div>
+	<p>selected.brandLater：{{selected.brandLater}}</p>
+	<p>select inline-block布局</p>
+	<div class="input_container">
+		<label class="input_description fl">品牌</label>
+		<div class="input_box">
+			<div class="select_me">
+				<ui-select ng-model="selected.brandLater" append-to-body="true" theme="select2"
+						   reset-searchI-input="true"
+						   style="min-width:200px;">
+					<ui-select-match placeholder="请选择">
+						<span ng-bind="$select.selected.name"></span>
+					</ui-select-match>
+					<ui-select-choices
+							repeat="item in (itemArray | filter: $select.search) track by item.id">
+						<span ng-bind="item.name"></span>
+					</ui-select-choices>
+					<ui-select-no-choice>
+						Dang! We couldn't find any choices...
+					</ui-select-no-choice>
+				</ui-select>
+			</div>
+			<button class="reset_select_val fl" type="button" ng-click="selected.brandLater = undefined">
+				<i class="fa fa-trash-o"></i>
+			</button>
+		</div>
+	</div>
+	
+	<!--select 展开的代码结构-->
+	<!--<div class="ui-select-container select2 select2-container ng-valid ng-touched ng-dirty ng-empty select2-container-active select2-dropdown-open open" ng-class="{'select2-container-active select2-dropdown-open open': $select.open, 'select2-container-disabled': $select.disabled, 'select2-container-active': $select.focus, 'select2-allowclear': $select.allowClear &amp;&amp; !$select.isEmpty()}" ng-model="selected.brandLater" append-to-body="true" theme="select2" reset-searchi-input="true" style="min-width: 200px; position: absolute; left: 234px; top: 180px; width: 200px;">
+		<a class="select2-choice ui-select-match ng-scope select2-default" ng-class="{'select2-default': $select.isEmpty()}" ng-click="$select.toggle($event)" aria-label="Select box select" placeholder="请选择">
+			<span ng-show="$select.isEmpty()" class="select2-chosen ng-binding" style="">请选择</span>
+			<span ng-hide="$select.isEmpty()" class="select2-chosen ng-hide" ng-transclude="" style="">
+				<span ng-bind="$select.selected.name" class="ng-binding ng-scope"></span>
+			</span>
+				&lt;!&ndash; ngIf: $select.allowClear && !$select.isEmpty() &ndash;&gt;
+			<span class="select2-arrow ui-select-toggle">
+				<b></b>
+			</span>
+		</a>
+
+		<div class="ui-select-dropdown select2-drop select2-with-searchbox select2-drop-active" style="opacity: 1;">
+			<div class="search-container select2-search">
+				<input class="ui-select-search select2-input ng-pristine ng-valid ng-empty ng-touched" style="width: 184px;"></div>
+			<ul class="ui-select-choices ui-select-choices-content select2-results ng-scope">
+				<li class="ui-select-choices-group">
+					<div class="ui-select-choices-group-label select2-result-label ng-binding ng-hide"></div>
+					<ul class="select2-result-single">
+						&lt;!&ndash; ngRepeat: item in $select.items track by item.id &ndash;&gt;
+						&lt;!&ndash; ngIf: $select.open &ndash;&gt;
+						<li class="ui-select-choices-row ng-scope">
+							<div class="select2-result-label ui-select-choices-row-inner">
+								<span class="ng-binding ng-scope">V</span>
+							</div>
+						</li>
+						&lt;!&ndash; end ngIf: $select.open &ndash;&gt;
+						&lt;!&ndash; end ngRepeat: item in $select.items track by item.id &ndash;&gt;&lt;!&ndash; ngIf: $select.open &ndash;&gt;
+						<li class="ui-select-choices-row ng-scope select2-highlighted">
+							<div class="select2-result-label ui-select-choices-row-inner">
+								<span class="ng-binding ng-scope">U</span>
+							</div>
+						</li>
+						&lt;!&ndash; end ngIf: $select.open &ndash;&gt;
+						&lt;!&ndash; end ngRepeat: item in $select.items track by item.id &ndash;&gt;&lt;!&ndash; ngIf: $select.open &ndash;&gt;
+						<li class="ui-select-choices-row ng-scope">
+							<div class="select2-result-label ui-select-choices-row-inner">
+								<span class="ng-binding ng-scope">N</span>
+							</div>
+						</li>
+						&lt;!&ndash; end ngIf: $select.open &ndash;&gt;
+						&lt;!&ndash; end ngRepeat: item in $select.items track by item.id &ndash;&gt;&lt;!&ndash; ngIf: $select.open &ndash;&gt;
+						<li class="ui-select-choices-row ng-scope">
+							<div class="select2-result-label ui-select-choices-row-inner">
+								<span class="ng-binding ng-scope">M</span>
+							</div>
+						</li>
+						&lt;!&ndash; end ngIf: $select.open &ndash;&gt;
+						&lt;!&ndash; end ngRepeat: item in $select.items track by item.id &ndash;&gt;&lt;!&ndash; ngIf: $select.open &ndash;&gt;
+						<li class="ui-select-choices-row ng-scope">
+							<div class="select2-result-label ui-select-choices-row-inner">
+								<span class="ng-binding ng-scope">I</span>
+							</div>
+						</li>
+						&lt;!&ndash; end ngIf: $select.open &ndash;&gt;
+						&lt;!&ndash; end ngRepeat: item in $select.items track by item.id &ndash;&gt;</ul>
+				</li>
+			</ul>
+			<div class="ui-select-no-choice dropdown ng-scope ng-hide" ng-show="$select.items.length == 0">
+				<div class="dropdown-content">
+					<div data-selectable="" ng-transclude="">
+						Dang! We couldn't find any choices...
+					</div>
+				</div>
+			</div>
+		</div>
+		<ui-select-single></ui-select-single>
+		<input ng-disabled="$select.disabled" class="ui-select-focusser ui-select-offscreen ng-scope" type="text"
+			   id="focusser-0" aria-label="Select box focus" aria-haspopup="true" role="button" disabled="">
+	</div>-->
+	
+	<p>在同一个input_box下面的日期选择控件</p>
+	<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix select_time">
+		<!--<div class="input_container fl clearfix select_time">-->
+		<label class="input_description fl">创建日期:</label>
+		<div class="input_box clearfix se_time">
+			<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd"
+				   ng-model="DateDayStart" show-button-bar="true" datepicker-options="" is-open="d.es"
+				   ng-click="d.es=!d.es">
+			<span class="fl time_se"> - </span>
+			<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd"
+				   ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minDate:DateDayStart}"
+				   is-open="d.e" ng-click="d.e=!d.e">
+		</div>
+		<!--</div>-->
+	</div>
+	
+	<p style="clear:both">不在同一个input_box下面的日期选择控件;自适应</p>
+	
+	<div class="input_container clearfix col-sm-4 col-md-3 col-lg-2">
+		<label class="input_description fl">创建日期:</label>
+		<i class="fa fa-calendar select_time_icon fr" ng-click="d.t=!d.t"></i>
+		<!-- alt-input-formats：手动输入接受的格式；uib-datepicker-popup：显示日期的格式；datepicker-options：设置选择年月还是年月日； -->
+		<div class="input_box">
+			<input type="text" readonly alt-input-formats="yyyy-MM" uib-datepicker-popup="yyyy-MM"
+				   ng-model="DateDayStartV" show-button-bar="false" datepicker-options="{minMode:'month'}" is-open="d.t"
+				   ng-click="d.t=!d.t">
+		</div>
+	</div>
+	<div class="input_container clearfix col-sm-4 col-md-3 col-lg-2">
+		<label class="input_description fl">到&nbsp;&nbsp;</label>
+		<i class="fa fa-calendar select_time_icon fr" ng-click="d.v=!d.v"></i>
+		<div class="input_box">
+			<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd"
+				   ng-model="DateDayEndV" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}"
+				   is-open="d.v" ng-click="d.v=!d.v">
+		</div>
+	</div>
+	<p>{{DateDayStartV}}</p>
+	<p>{{DateDayEndV}}</p>
+	<input type="text" class="form-control">
+	
+	
+	<p>面试题测试</p>
+	<input type="text" ng-model="obj.aaa">
+	<p>{{obj.aaa}}</p>
+	<input type="text" ng-model="bbb">
+	<p>{{bbb}}</p>
+
+</div>

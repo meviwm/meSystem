@@ -1,0 +1,222 @@
+<div class="me_modal_box">
+	<div class="me_modal_header">
+		<h1 class="me_modal_tit">添加栏目内容<a class="return_page fr" ng-click="closeModal()">关闭</a></h1>
+	</div>
+	<div class="me_modal_body" ng-scrollbars>
+		<!--<div class="content_box">-->
+		
+		<div class="operate_area container-fluid">
+			<div class="row clearfix">
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">账号:</label>
+					<div class="input_box"><input type="text"></div>
+				</div>
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">姓名:</label>
+					<div class="input_box"><input type="text"></div>
+				</div>
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">状态:</label>
+					<div class="input_box">
+						<select>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">状态:</label>
+					<div class="input_box">
+						<select>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">状态:</label>
+					<div class="input_box">
+						<select>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">状态:</label>
+					<div class="input_box">
+						<select>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+							<option>aaa</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix select_time">
+					<!--<div class="input_container fl clearfix select_time">-->
+					<label class="input_description fl">创建日期:</label>
+					<div class="input_box clearfix se_time">
+						<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.es" ng-click="d.es=!d.es">
+						<span class="fl time_se"> - </span>
+						<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+					</div>
+					<!--</div>-->
+				</div>
+				<!--<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+					<label class="input_description fl">创建日期:</label>
+					<div class="input_box">
+						<input type="text">
+					</div>
+				</div>-->
+				<button class="me-btn fl"><i class="fa fa-search"></i>搜索</button>
+				<button class="me-btn fr" ng-click="createAdmin('add')"><i class="fa fa-plus"></i>新增</button>
+				<!--<div class="search_btn fl">
+				</div>-->
+			</div>
+		</div>
+		
+			<!--<div class="operate_area clearfix">
+				<div class="search_btn fr">
+					<button class="me-btn"><i class="fa fa-search"></i>搜索</button>
+					&lt;!&ndash;<a ui-sref="me.addProducts" class="me-btn"><i class="fa fa-plus"></i>创建</a>&ndash;&gt;
+				</div>
+				<div class="operate_box c6">
+					<div class="input_container fl clearfix">
+						<label class="input_description fl">产品名:</label>
+						<div class="input_box"><input type="text"></div>
+					</div>
+					<div class="input_container fl clearfix">
+						<label class="input_description fl">产品ID:</label>
+						<div class="input_box">
+							<input type="text">
+						</div>
+					</div>
+					<div class="input_container fl clearfix">
+						<label class="input_description fl">产品分类:</label>
+						<div class="input_box">
+							<select>
+								<option>aaa</option>
+								<option>aaa</option>
+								<option>aaa</option>
+								<option>aaa</option>
+							</select>
+						</div>
+					</div>
+					<div class="input_container fl clearfix">
+						<label class="input_description fl">品牌:</label>
+						<div class="input_box">
+							<select>
+								<option>aaa</option>
+								<option>aaa</option>
+								<option>aaa</option>
+								<option>aaa</option>
+							</select>
+						</div>
+					</div>
+					<div class="input_container fl clearfix">
+						<label class="input_description fl">创建日期:</label>
+						<div class="input_box">
+							<input type="text" uib-datepicker-popup="yyyy-MM" ng-model="DateDayStart"
+								   show-button-bar="false" datepicker-options="{minMode:'month'}" is-open="d.t"
+								   ng-focus="d.t=!d.t">
+						</div>
+					</div>
+					<div class="input_container fl clearfix">
+						<label class="input_description fl">到&nbsp;&nbsp;</label>
+						<div class="input_box">
+							<input type="text" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd"
+								   show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}"
+								   is-open="d.e" ng-focus="d.e=!d.e">
+						</div>
+					</div>
+				</div>
+			</div>-->
+			
+			<div class="contents">
+				<table class="table my_table">
+					<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<!--<th>产品名称</th>-->
+						<th class="sort_box" ng-click="data.ns=!data.ns">
+							产品名称
+							<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.ns}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.ns}"></i>
+					</span>
+						</th>
+						<th>产品分类</th>
+						<!--<th>产品品牌</th>-->
+						<th class="sort_box" ng-click="data.s=!data.s">
+							产品品牌
+							<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.s}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.s}"></i>
+					</span>
+						</th>
+						<!--<th>品牌ID</th>-->
+						<th>商品</th>
+						<th>创建时间</th>
+						<th width="60px"><a class="op_item" ng-click="data.sort = !data.sort"></a>排序{{data.sort}}</th>
+					</tr>
+					</thead>
+					<tbody class="sortable_box" sv-root sv-part="lists" style="position:relative" sv-on-sort="sortable($item, $partFrom, $partTo, $indexFrom, $indexTo)" sv-on-stop="sortableEnd($item, $part, $index)">
+					<tr ng-repeat="item in lists" sv-element="opts" style="width:100% !important;">
+						<td><input type="checkbox" ng-model="item.hasSelected"></td>
+						<td>{{item.id}}</td>
+						<td>{{item.productName}}</td>
+						<td>{{item.productCategory}}</td>
+						<td>{{item.productBrand}}</td>
+						<!--<td>3670</td>-->
+						<td>{{item.skus}}</td>
+						<td>{{item.createDate}}</td>
+						<td><i ng-show="data.sort" class="fa fa-arrows-v"></i></td>
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td colspan="6">
+							<!-- 批量操作 -->
+							<!--<div class="batch_operate_area clearfix fl">
+								<button class="me-btn fl" ng-click="openModal('del')">删除</button>
+								&lt;!&ndash;<button class="me-btn fl">恢复</button>&ndash;&gt;
+								&lt;!&ndash;<button class="me-btn fl">重置</button>&ndash;&gt;
+							</div>-->
+							<nav class="fr pagination_box">
+								<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+								<ul class="pagination fl">
+									<li><a href="#">&laquo;</a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">&raquo;</a></li>
+								</ul>
+							</nav>
+						</td>
+						<td></td>
+					</tr>
+					</tfoot>
+				</table>
+			</div>
+			
+			
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		
+		
+		<!--</div>-->
+	</div>
+</div>

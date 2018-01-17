@@ -1,0 +1,49 @@
+<style>
+	.godsLists{overflow:hidden;margin:15px 0;}
+	.godsItem{padding:10px;border-bottom:1px solid #dedede;overflow:hidden;}
+	.godsImg{overflow:hidden;float:left;width:92px;height:92px;margin-right:10px;}
+	.godsImg img{display:block;width:100%;height:100%;}
+	.godsInfo{overflow:hidden;}
+	.godsName{margin:0 0 20px 0;line-height:20px;font-size:14px;color:#353535;height:40px;overflow:hidden;}
+	.godsPrice{float:left;color:#ff3500;margin:0;line-height:32px;}
+	.buyGods{float:right;border:1px solid #ff3500;color:#ff3500;font-size:14px;padding:0 10px;height:32px;line-height:30px;}
+	
+	
+	
+	.goodsList_horizontal .godsLists{margin:15px 5px;}
+	.goodsList_horizontal .godsItem{border-bottom:0;float:left;width:50%;overflow:hidden;padding:5px;margin:5px 0;}
+	.goodsList_horizontal .godsImg{float:none;display:block;width:100%;height:auto;margin-right:0;padding:10px;border:1px solid #dedede;border-bottom:0;}
+	.goodsList_horizontal .godsImg img{display:block;width:100%;height:auto;}
+	.goodsList_horizontal .godsInfo{overflow:hidden;border:1px solid #dedede;border-top:0;padding:10px;}
+	.goodsList_horizontal .godsName{margin-bottom:0;}
+	.goodsList_horizontal .godsPrice{float:none;}
+	.goodsList_horizontal .buyGods{float:none;display:block;border:1px solid #ff3500;text-align:center;}
+</style>
+<div class="godsListBox" ng-class="({goodsList_horizontal:makeup})">
+	<ul class="godsLists">
+		<li class="godsItem">
+			<a href="" class="godsImg"><img src="images/200_200.jpg" alt=""></a>
+			<div class="godsInfo">
+				<p ng-if="buyBtn" class="godsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+				<p ng-if="godName" class="godsPrice">￥99.99</p>
+				<a ng-if="godPrice" href="" class="buyGods">加入购物车</a>
+			</div>
+		</li>
+		<li class="godsItem">
+			<a href="" class="godsImg"><img src="images/200_200.jpg" alt=""></a>
+			<div class="godsInfo">
+				<p ng-if="buyBtn" class="godsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+				<p ng-if="godName" class="godsPrice">￥99.99</p>
+				<a ng-if="godPrice" href="" class="buyGods">加入购物车</a>
+			</div>
+		</li>
+		<li class="godsItem">
+			<a href="" class="godsImg"><img src="images/200_200.jpg" alt=""></a>
+			<div class="godsInfo">
+				<p ng-if="buyBtn" class="godsName">商品名称商品名称商品名称商品名称商品名称商品名称</p>
+				<p ng-if="godName" class="godsPrice">￥99.99</p>
+				<a ng-if="godPrice" href="" class="buyGods">加入购物车</a>
+			</div>
+		</li>
+	</ul>
+</div>

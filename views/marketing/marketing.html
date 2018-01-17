@@ -1,0 +1,312 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">限时折扣 <a class="fr return_page" ng-click="returnPage()">返回</a></h1>
+	<div class="create_product">
+	<div class="product_attr_item clearfix">
+		<div class="product_attr_key fl">活动信息</div>
+		<div class="product_attr_val clearfix">
+			
+			<div class="input_container">
+				<label class="input_description fl">活动名称</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">开始时间</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">结束时间</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container clearfix select_time">
+				<!--<div class="input_container fl clearfix select_time">-->
+				<label class="input_description fl">活动时间:</label>
+				<div class="input_box clearfix se_time">
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.es" ng-click="d.es=!d.es">
+					<span class="fl time_se"> - </span>
+					<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+				</div>
+				<!--</div>-->
+			</div>
+			
+			<div class="input_container">
+				<label class="input_description fl">活动标签</label>
+				<div class="input_box">
+					<input type="text">
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--选择活动商品-->
+		<div class="product_attr_item clearfix">
+		<div class="product_attr_key fl">活动商品</div>
+		<div class="product_attr_val product_attrs_box clearfix">
+			<div class="tab_tit">
+				<span ng-class="{active:selectedTab=='selectGoods'}"><button ng-click="selectTab('selectGoods')">1、选择商品</button>
+				</span><span ng-class="{active:selectedTab=='settZK'}"><button ng-click="selectTab('settZK')">2、设置折扣</button></span>
+			</div>
+			<div class="tab_con">
+				<!--选择商品-->
+				<div class="tab_con_item" ng-show="selectedTab=='selectGoods'">
+					<div class="operate_area container-fluid">
+						<div class="row clearfix">
+							<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+								<label class="input_description fl">ID:</label>
+								<div class="input_box"><input type="text"></div>
+							</div>
+							<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+								<label class="input_description fl">品牌:</label>
+								<div class="input_box"><input type="text"></div>
+							</div>
+							<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+								<label class="input_description fl">分类:</label>
+								<div class="input_box">
+									<select>
+										<option>aaa</option>
+										<option>aaa</option>
+										<option>aaa</option>
+										<option>aaa</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix select_time">
+								<!--<div class="input_container fl clearfix select_time">-->
+								<label class="input_description fl">上架日期:</label>
+								<div class="input_box clearfix se_time">
+									<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.es" ng-click="d.es=!d.es">
+									<span class="fl time_se"> - </span>
+									<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+								</div>
+								<!--</div>-->
+							</div>
+							<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix select_time">
+								<!--<div class="input_container fl clearfix select_time">-->
+								<label class="input_description fl">下架日期:</label>
+								<div class="input_box clearfix se_time">
+									<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayStart" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.es" ng-click="d.es=!d.es">
+									<span class="fl time_se"> - </span>
+									<input type="text" readonly alt-input-formats="yyyy-MM-dd" uib-datepicker-popup="yyyy-MM-dd" ng-model="DateDayEnd" show-button-bar="false" datepicker-options="{minMode:'day',showWeeks:false}" is-open="d.e" ng-click="d.e=!d.e">
+								</div>
+								<!--</div>-->
+							</div>
+							<button style="margin-top:0;" class="me-btn fr"><i class="fa fa-search"></i>搜索</button>
+						</div>
+					</div>
+					
+					<div class="contents">
+						<table class="table my_table">
+							<thead>
+							<tr>
+								<th></th>
+								<th>ID</th>
+								<!--<th>产品名称</th>-->
+								<th class="sort_box" ng-click="data.ns=!data.ns">
+									产品名称
+									<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.ns}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.ns}"></i>
+					</span>
+								</th>
+								<th>产品分类</th>
+								<!--<th>产品品牌</th>-->
+								<th class="sort_box" ng-click="data.s=!data.s">
+									产品品牌
+									<span>
+						<i class="fa fa-sort-asc" ng-class="{active:data.s}"></i>
+						<i class="fa fa-sort-desc" ng-class="{active:!data.s}"></i>
+					</span>
+								</th>
+								<!--<th>品牌ID</th>-->
+								<th>商品</th>
+								<th>创建时间</th>
+								<th>操作</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>717</td>
+								<td>LANCASTER 水桶包 米白色 42218CHAMPAGNE</td>
+								<td>斜跨包</td>
+								<td>LANCASTER</td>
+								<!--<td>3670</td>-->
+								<td>1781</td>
+								<td>2016-12-12 09:09</td>
+								<td>
+									<a class="op_item" ui-sref="me.editProducts({id:1})">修改</a>
+									<a class="op_item" ng-click="openModal('del')">删除</a>
+									<!--<a class="op_item" ui-sref="me.addCommodity">添加商品</a>-->
+									<a class="op_item" ui-sref="me.productDetails">详情</a>
+									<!--<a class="op_item">上线用户</a>
+									<a class="op_item">下线用户</a>
+									<a class="op_item">帐户信息</a>
+									<a class="op_item">提现信息</a>-->
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>717</td>
+								<td>LANCASTER 水桶包 米白色 42218CHAMPAGNE</td>
+								<td>斜跨包</td>
+								<td>LANCASTER</td>
+								<!--<td>3670</td>-->
+								<td>1781</td>
+								<td>2016-12-12 09:09</td>
+								<td>
+									<a class="op_item" ui-sref="me.editProducts({id:2})">修改</a>
+									<a class="op_item" ng-click="openModal('del')">删除</a>
+									<!--<a class="op_item" ui-sref="me.addCommodity">添加商品</a>-->
+									<a class="op_item" ui-sref="me.details">详情</a>
+									<!--<a class="op_item">上线用户</a>
+									<a class="op_item">下线用户</a>
+									<a class="op_item">帐户信息</a>
+									<a class="op_item">提现信息</a>-->
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>717</td>
+								<td>LANCASTER 水桶包 米白色 42218CHAMPAGNE</td>
+								<td>斜跨包</td>
+								<td>LANCASTER</td>
+								<!--<td>3670</td>-->
+								<td>1781</td>
+								<td>2016-12-12 09:09</td>
+								<td>
+									<a class="op_item" ui-sref="me.editProducts({id:3})">修改</a>
+									<a class="op_item" ng-click="openModal('del')">删除</a>
+									<!--<a class="op_item" ui-sref="me.addCommodity">添加商品</a>-->
+									<a class="op_item" ui-sref="me.details">详情</a>
+									<!--<a class="op_item">上线用户</a>
+									<a class="op_item">下线用户</a>
+									<a class="op_item">帐户信息</a>
+									<a class="op_item">提现信息</a>-->
+								</td>
+							</tr>
+							</tbody>
+							<tfoot>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td colspan="9">
+									<!-- 批量操作 -->
+									<div class="batch_operate_area clearfix fl">
+										<button class="me-btn fl" ng-click="openModal('del')">删除</button>
+										<!--<button class="me-btn fl">恢复</button>-->
+										<!--<button class="me-btn fl">重置</button>-->
+									</div>
+									<nav class="fr pagination_box">
+										<p class="pagination_total fl">共 89 条数据，每页 15 条，共 6 页</p>
+										<ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+									</nav>
+								</td>
+								<td></td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+					
+				</div>
+				<!--设置折扣-->
+				<div class="tab_con_item" ng-show="selectedTab=='settZK'">
+					<div class="orderGoods">
+						<table class="table my_table markeTab">
+							<thead>
+							<tr>
+								<th width="28px"></th>
+								<th>商品</th>
+								<th>库存</th>
+								<th>价格</th>
+								<th>打折</th>
+								<th>减价</th>
+								<th>活动数量</th>
+								<th>限购设置</th>
+								<th>最终价格</th>
+								<th></th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>
+									<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+									<div class="goods_info">
+										<a class="goods_name">多发萨达萨达ddddd</a>
+										<p class="goods_style">尺码：32；颜色：橙色；</p>
+									</div>
+								</td>
+								<td>2</td>
+								<td>99.99</td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td>88.88</td>
+								<td><a class="op_item">取消</a></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>
+									<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+									<div class="goods_info">
+										<a class="goods_name">多发萨达萨达ddddd</a>
+										<p class="goods_style">尺码：32；颜色：橙色；</p>
+									</div>
+								</td>
+								<td>2</td>
+								<td>99.99</td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td>88.88</td>
+								<td><a class="op_item">取消</a></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>
+									<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+									<div class="goods_info">
+										<a class="goods_name">多发萨达萨达ddddd</a>
+										<p class="goods_style">尺码：32；颜色：橙色；</p>
+									</div>
+								</td>
+								<td>2</td>
+								<td>99.99</td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td>88.88</td>
+								<td><a class="op_item">取消</a></td>
+							</tr>
+							
+							</tbody>
+							<tfoot>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td colspan="3">批量设置</td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td><input type="text"></td>
+								<td></td>
+								<td>
+									<div class="batch_operate_area clearfix fl">
+										<button class="me-btn fl">取消</button>
+										<!--<button class="me-btn fl">恢复</button>-->
+										<!--<button class="me-btn fl">重置</button>-->
+									</div>
+								</td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		
+	</div>
+	</div>
+</div>

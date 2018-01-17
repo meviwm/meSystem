@@ -1,0 +1,22 @@
+{
+  "bigDatatypes": [
+    {
+      "name": "商品描述",
+      "id": 1,
+      "tmp": "ueditor11486955238109",
+      "content": "aaa"
+    },
+    {
+      "name": "规格参数",
+      "id": 2,
+      "tmp": "ueditor21486955238109",
+      "content": "bbb"
+    },
+    {
+      "name": "售后服务",
+      "id": 3,
+      "tmp": "ueditor31486955238109",
+      "content": "ccc"
+    }
+  ]
+}

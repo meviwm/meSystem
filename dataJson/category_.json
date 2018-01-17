@@ -1,0 +1,117 @@
+{
+  "header": {
+    "flag": 1
+  },
+  "content": [
+    {
+      "children": [],
+      "code": "1-3361-4414",
+      "coverPath": "",
+      "delete": true,
+      "id": 4414,
+      "introduction": "配饰及其他",
+      "itemIndex": 5,
+      "mapTreeTypeValue": 6,
+      "name": "ACCESSORIES",
+      "parentId": 3361,
+      "parentName": "产品分类",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "配饰及其他",
+      "test":{
+        "me":true,
+        "we":false,
+        "name":"ylmf"
+      }
+    },
+    {
+      "children": [],
+      "code": "1-3361-4412",
+      "coverPath": "",
+      "delete": false,
+      "id": 4412,
+      "introduction": "上衣",
+      "itemIndex": 4,
+      "mapTreeTypeValue": 6,
+      "name": "CLOTHING-UP",
+      "parentId": 3361,
+      "parentName": "产品分类",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "上衣",
+      "test":{
+        "me":true,
+        "we":false,
+        "name":"ylmf"
+      }
+    },
+    {
+      "children": [],
+      "code": "1-3361-4415",
+      "coverPath": "",
+      "delete": false,
+      "id": 4415,
+      "introduction": "下装",
+      "itemIndex": 3,
+      "mapTreeTypeValue": 6,
+      "name": "CLOTHING-DOW",
+      "parentId": 3361,
+      "parentName": "产品分类",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "下装",
+      "test":{
+        "me":true,
+        "we":false,
+        "name":"ylmf"
+      }
+    },
+    {
+      "children": [],
+      "code": "1-3361-4413",
+      "coverPath": "",
+      "delete": false,
+      "id": 4413,
+      "introduction": "包",
+      "itemIndex": 2,
+      "mapTreeTypeValue": 6,
+      "name": "BAGS",
+      "parentId": 3361,
+      "parentName": "产品分类",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "包",
+      "test":{
+        "me":false,
+        "we":false,
+        "name":"ylmf"
+      }
+    },
+    {
+      "children": [],
+      "code": "1-3361-4411",
+      "coverPath": "",
+      "delete": false,
+      "id": 4411,
+      "introduction": "鞋",
+      "itemIndex": 1,
+      "mapTreeTypeValue": 6,
+      "name": "SHOES",
+      "parentId": 3361,
+      "parentName": "产品分类",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "鞋",
+      "test":{
+        "me":false,
+        "we":false,
+        "name":"ylmf"
+      }
+    }
+  ]
+}

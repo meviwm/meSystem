@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="../jquery.mCustomScrollbar.css">
+	<style>
+		body{overflow:hidden;}
+		.content{width:320px;height:500px;background-color:#00a8ff;margin:10px auto;}
+		.content p{font-size:14px;color:#fff;line-height:26px;margin:0;}
+	</style>
+</head>
+<body>
+<div class="content" id="#content-1">
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<p>dscnjsdkfcnsdjksd</p>
+	<div class="scroobarFoo"></div>
+</div>
+<script src="../js/minified/jquery-1.11.0.min.js"></script>
+<!--<script src="../js/minified/jquery.mousewheel.min.js"></script>-->
+<script src="../jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+	
+    /*(function($){
+        $(window).on("load",function(){
+
+            $("#content-1").mCustomScrollbar({
+                autoHideScrollbar:true,
+                theme:"rounded"
+            });
+
+        });
+    })(jQuery);*/
+	/*$(function(){
+        $(window).on("load",function() {
+            $("container").mCustomScrollbar({
+                theme: "dark",
+                axis: "y" // horizontal scrollbar
+            });
+        });
+	});*/
+	
+</script>
+<script>
+    (function($){
+        $(window).on("load",function(){
+            $(".content").mCustomScrollbar({
+                axis:"y",
+                theme: "dark",
+                autoDraggerLength: true,
+//                mouseWheel:{ scrollAmount: '1px' },		//滚动的距离
+                callbacks:{
+                    whileScrolling: function(){
+//                        console.log(this.mcs.top-$(".content").height());
+//                        console.log($(".scroobarFoo").position().top);
+//						console.log((this.mcs.top-$(".content").height())+$(".scroobarFoo").position().top);
+//                        .toFixed(2)
+                        if((this.mcs.top-$(".content").height())+$(".scroobarFoo").position().top===200){
+                            console.log('000');
+						}
+					}
+                }
+			});
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

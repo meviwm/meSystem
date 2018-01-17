@@ -1,0 +1,113 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">栏目编辑</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 添加子栏目 编辑 -->
+		<div class="editAdmin" ng-if="state=='create'||state=='edit'">
+			<div class="input_container fl">
+				<label class="input_description fl">栏目名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl">
+				<label class="input_description fl">栏目类型:</label>
+				<div class="input_box">
+					<select>
+						<option>子栏目</option>
+						<option>子栏目</option>
+						<option>子栏目</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container fl">
+				<label class="input_description fl">填充策略:</label>
+				<div class="input_box">
+					<select>
+						<option>子栏目</option>
+						<option>子栏目</option>
+						<option>子栏目</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container fl">
+				<label class="input_description fl">填充规则:</label>
+				<div class="input_box">
+					<select>
+						<option>子栏目</option>
+						<option>子栏目</option>
+						<option>子栏目</option>
+					</select>
+				</div>
+			</div>
+			<div class="input_container fl">
+				<label class="input_description fl">显示条数:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container fl">
+				<label class="input_description fl">栏目模板:</label>
+				<div class="input_box">
+					<select>
+						<option>子栏目</option>
+						<option>子栏目</option>
+						<option>子栏目</option>
+					</select>
+				</div>
+			</div>
+			<div class="clear_float"></div>
+			<div class="input_container">
+				<label class="input_description fl">栏目图片:</label>
+				<div class="input_box">
+					<div class="img_in"><img class="upload_img" ng-show="false" src="images/200_200.jpg" alt=""></div>
+					<p class="update_note">尺寸：品牌图标:150*130;<br>首页banner:640*320;<br>活动图片:640*160</p>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">栏目跳转:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<p class="input_note">产品跳转页面：/product/productSkuDetails.htm?id=产品ID<br>
+				活动专题跳转页面：/app/subject/html/[效果图文件名].html<br>
+				分类跳转页面：/product/search_product.htm?categoryPid=父分类ID<br>
+				标签跳转页面：/product/search_product.htm?keyword=标签名<br>
+				品牌瀑布流页面：/product/getBrandFlow?brand=品牌ID<br>
+				品牌分类瀑布流：/product/getBrandFlow?brand=品牌ID&categoryPid=父分类ID</p>
+			
+			<div class="input_container">
+				<label class="input_description fl">栏目描述:</label>
+				<div class="input_box"><textarea></textarea></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		
+		<!-- 禁用 -->
+		<div class="editAdmin" ng-if="state=='del'">
+			<p class="opt_text">是否删除该产品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 启用 -->
+		<div class="editAdmin" ng-if="state=='recover'">
+			<p class="opt_text">是否删除该产品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='delete'">
+			<p class="opt_text">是否删除该产品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+	
+	</div>
+</div>

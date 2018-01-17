@@ -1,0 +1,167 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">角色管理<a class="fr return_page" ng-click="returnPage()">返回</a></h1>
+	<!-- 最多允许5个搜索项 -->
+	<div class="operate_area container-fluid">
+		<div class="row clearfix">
+			<div class="col-sm-4 col-md-3 col-lg-2 input_container clearfix">
+				<label class="input_description fl">权限名:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="contents">
+		<div class="input_group_container">
+			<div class="input_group_box">
+				<label class="input_desi fl">角色名称</label>
+				<p class="help-block fr ng-hide" style="">请输入权限名称4~50个字符.</p>
+				<div class="input_boxaaa">
+					<input type="text" name="name1">
+				</div>
+				<div class="input_group_container sub_group_box">
+					<label class="group_title">权限</label>
+					<div class="input_group_container sub_group_box">
+						<label class="group_title">普通用户管理权限</label>
+						<ul class="group_item_list ">
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">取消代言人资格权限</label></li>
+							<li class="group_item"><label><input type="checkbox" name="competences">禁用用户权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">普通用户上下线管理权限(下线)</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">用户代言人上下线管理权限(上线)</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">恢复用户权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">普通用户代言人账户信息权限</label></li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">普通用户代言人提现信息权限</label></li>
+							<li class="group_item"><label><input type="checkbox" name="competences">普通用户上下线管理权限(上线)</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">恢复代言人资格权限</label></li>
+							<li class="group_item"><label><input type="checkbox" name="competences">普通用户管理权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">用户代言人上下线管理权限(下线)</label>
+							</li>
+						</ul>
+					</div>
+					<div class="input_group_container sub_group_box">
+						<label class="group_title">后台用户管理权限</label>
+						<ul class="group_item_list">
+							<li class="group_item"><label><input type="checkbox" name="competences">后台用户管理修改</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">后台用户管理添加用户</label></li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">后台用户管理搜索功能</label></li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">后台用户管理启用功能</label></li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">后台用户管理禁用功能</label></li>
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">后台用户管理设置角色</label></li>
+						</ul>
+					</div>
+					<div class="input_group_container sub_group_box">
+						<label class="group_title">栏目管理权限</label>
+						<ul class="group_item_list">
+							<li class="group_item"><label><input type="checkbox" name="competences">调整栏目顺序</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">查看栏目详情</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">搜索栏目权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">编辑栏目权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">添加子栏目权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">栏目恢复</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">栏目禁用</label>
+							</li>
+						</ul>
+					</div>
+					<div class="input_group_container sub_group_box">
+						<label class="group_title">商品管理权限</label>
+						<ul class="group_item_list">
+							<li class="group_item"><label><input type="checkbox"
+																 name="competences">按类型获取产品码表树</label></li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品预览功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品图片上传功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品库存修改功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品发布功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">产品搜索功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">产品新增功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">产品修改功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">产品删除功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品添加功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品搜索功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品修改功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品删除功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品重新上架功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">商品强制下架功能</label>
+							</li>
+						</ul>
+					</div>
+					<div class="input_group_container sub_group_box ng-scope" ng-repeat="cate in competenceTypes">
+						<label class="group_title ng-binding">角色权限管理权限</label>
+						<ul class="group_item_list ">
+							<li class="group_item"><label><input type="checkbox" name="competences">角色禁用权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">角色启用权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">权限禁用功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">角色修改权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">角色删除权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">权限搜索功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">权限添加功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">权限更新功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">权限删除功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">角色添加权限</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">权限恢复功能</label>
+							</li>
+							<li class="group_item"><label><input type="checkbox" name="competences">角色搜索权限</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="input_group_box">
+					<label class="input_desi fl">备注</label>
+					<div class="input_boxaaa">
+						<input type="text" name="comment1" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="btn_box">
+			<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+			<button class="me-btn" ng-click="closeModal()">取消</button>
+		</div>
+		
+	</div>
+	
+</div>

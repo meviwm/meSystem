@@ -1,0 +1,256 @@
+{
+  "header": {
+    "flag": 1
+  },
+  "content": {
+    "order": [
+      {
+        "couponDetails": [],
+        "couponMoney": 0,
+        "createDate": "2017-01-20 16:31:47",
+        "creator": "22",
+        "creatorName": "22",
+        "deliveryTypeDesc": "只双休日、假日送货",
+        "deliveryTypeValue": 2,
+        "freightPrice": 200,
+        "id": 2,
+        "integral": 0,
+        "invoiceInfo": "否",
+        "modifier": "22",
+        "modifierName": "22",
+        "modifyDate": "2017-01-21 16:31:47",
+        "orderItems": [
+          {
+            "name": "test",
+            "outSkuId": "",
+            "productId": 59655,
+            "saleAttr": [
+              {
+                "key": "颜色",
+                "keyId": "5618",
+                "value": "黄",
+                "valueId": "14740"
+              }
+            ],
+            "skuCoverTo": {
+              "id": 1,
+              "path": "/vandafile/platform/commodity/picture//vandafile/platform/commodity/picture/201701/22/1485080887909.jpg",
+              "skuId": 288788
+            },
+            "skuId": 288788,
+            "skuListPrice": 200,
+            "skuQty": 1,
+            "skuSellPrice": 200
+          },
+          {
+            "name": "test",
+            "outSkuId": "",
+            "productId": 59655,
+            "saleAttr": [
+              {
+                "key": "颜色",
+                "keyId": "5618",
+                "value": "黄",
+                "valueId": "14740"
+              }
+            ],
+            "skuCoverTo": {
+              "id": 1,
+              "path": "/vandafile/platform/commodity/picture//vandafile/platform/commodity/picture/201701/22/1485080887909.jpg",
+              "skuId": 288788
+            },
+            "skuId": 288788,
+            "skuListPrice": 200,
+            "skuQty": 1,
+            "skuSellPrice": 200
+          }
+        ],
+        "orderLogs": [
+          {
+            "id": 2,
+            "operationDate": "2017-02-06 16:20:04",
+            "operatorId": 1,
+            "operatorMetaValue": "user",
+            "operatorName": "111",
+            "orderId": 2,
+            "orderNumber": "54321",
+            "orderStatusDesc": "待确认",
+            "orderStatusValue": 1
+          },
+          {
+            "id": 2,
+            "operationDate": "2017-02-06 16:20:04",
+            "operatorId": 1,
+            "operatorMetaValue": "user",
+            "operatorName": "111",
+            "orderId": 2,
+            "orderNumber": "54321",
+            "orderStatusDesc": "待确认",
+            "orderStatusValue": 1
+          }
+        ],
+        "orderNumber": "54321",
+        "orderPayment": 200,
+        "orderStatusDesc": "待发货",
+        "orderStatusValue": 3,
+        "orderTotalPrice": 200,
+        "orderTotalSellPrice": 200,
+        "orderUserTo": {
+          "address": "bbbbbbbbbbbbbbbbbb",
+          "area": "桥东区",
+          "corriere": "",
+          "name": "bbb",
+          "notes": "",
+          "parentArea": "石家庄市",
+          "parentParentArea": "河北省",
+          "phone": "13111111111",
+          "zipcode": "654321"
+        },
+        "paymentMethodDesc": "货到付款",
+        "paymentMethodValue": 2,
+        "realReceives": [
+          {
+            "amount": 100,
+            "id": 2,
+            "orderNumber": "54321",
+            "payDate": "2017-02-06 10:56:09",
+            "payPerson": "aaa",
+            "payTypeDesc": "货到付款",
+            "payTypeValue": 2,
+            "proof": "a",
+            "remark": "",
+            "userId": 1,
+            "userName": "2222",
+            "userType": "user"
+          },
+          {
+            "amount": 100,
+            "id": 2,
+            "orderNumber": "54321",
+            "payDate": "2017-02-06 10:56:09",
+            "payPerson": "aaa",
+            "payTypeDesc": "货到付款",
+            "payTypeValue": 2,
+            "proof": "a",
+            "remark": "",
+            "userId": 1,
+            "userName": "2222",
+            "userType": "user"
+          }
+        ],
+        "remark": "",
+        "sellOrders": [
+          {
+            "amount": 200,
+            "comment": "aaaaaaaaaaaaa",
+            "createDate": "2017-02-05 15:58:08",
+            "id": 1,
+            "operatorId": 1,
+            "operatorName": "111",
+            "orderNumber": "54321",
+            "paymentMethodDesc": "货到付款",
+            "sellOrderItems": [
+              {
+                "name": "test",
+                "outSkuId": "",
+                "productId": 59655,
+                "saleAttr": [
+                  {
+                    "key": "颜色",
+                    "keyId": "5618",
+                    "value": "黄",
+                    "valueId": "14740"
+                  }
+                ],
+                "skuCoverTo": {
+                  "id": 1,
+                  "path": "/vandafile/platform/commodity/picture//vandafile/platform/commodity/picture/201701/22/1485080887909.jpg",
+                  "skuId": 288788
+                },
+                "skuId": 288788,
+                "skuListPrice": 400,
+                "skuQty": 1,
+                "skuSellPrice": 400
+              },
+              {
+                "name": "test",
+                "outSkuId": "",
+                "productId": 59655,
+                "saleAttr": [
+                  {
+                    "key": "颜色",
+                    "keyId": "5618",
+                    "value": "黄",
+                    "valueId": "14740"
+                  }
+                ],
+                "skuCoverTo": {
+                  "id": 1,
+                  "path": "/vandafile/platform/commodity/picture//vandafile/platform/commodity/picture/201701/22/1485080887909.jpg",
+                  "skuId": 288788
+                },
+                "skuId": 288788,
+                "skuListPrice": 400,
+                "skuQty": 1,
+                "skuSellPrice": 400
+              }
+            ],
+            "sellOrderNumber": "123123123123123",
+            "sendOrder": [
+              {
+                "corriereType": "bbb",
+                "createDate": "2017-02-05 10:22:31",
+                "deliveryDate": "",
+                "id": 1,
+                "modifier": null,
+                "modifyDate": "",
+                "operatorName": "111",
+                "orderUsersTo": {
+                  "address": "bbbbbbbbbbbbbbbbbb",
+                  "area": "桥东区",
+                  "corriere": "",
+                  "name": "bbb",
+                  "notes": "",
+                  "parentArea": "石家庄市",
+                  "parentParentArea": "河北省",
+                  "phone": "13111111111",
+                  "zipcode": "654321"
+                },
+                "remark": "",
+                "sellOrderId": "123123123123123",
+                "senderOrderNum": "11111",
+                "trackingNo": "11111111222222"
+              },
+              {
+                "corriereType": "bbb",
+                "createDate": "2017-02-05 10:22:31",
+                "deliveryDate": "",
+                "id": 1,
+                "modifier": null,
+                "modifyDate": "",
+                "operatorName": "111",
+                "orderUsersTo": {
+                  "address": "bbbbbbbbbbbbbbbbbb",
+                  "area": "桥东区",
+                  "corriere": "",
+                  "name": "bbb",
+                  "notes": "",
+                  "parentArea": "石家庄市",
+                  "parentParentArea": "河北省",
+                  "phone": "13111111111",
+                  "zipcode": "654321"
+                },
+                "remark": "",
+                "sellOrderId": "123123123123123",
+                "senderOrderNum": "11111",
+                "trackingNo": "11111111222222"
+              }
+            ],
+            "transit": 200
+          }
+        ],
+        "sellerDiscount": 200
+      }
+    ]
+  }
+}

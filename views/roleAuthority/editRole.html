@@ -1,0 +1,32 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">角色管理</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='delete'">
+			<p class="opt_text">您是否要删除此条数据？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='del'">
+			<p class="opt_text">您是否要进行此操作？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 恢复 -->
+		<div class="editAdmin" ng-if="state=='recover'">
+			<p class="opt_text">您是否要进行此操作？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+	
+	</div>
+</div>

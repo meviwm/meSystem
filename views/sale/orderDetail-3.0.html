@@ -1,0 +1,417 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">订单详情 <a class="fr return_page" ng-click="returnPage()">返回</a></h1>
+	<div class="contents">
+
+		<div class="orderState" ng-init="data.orderState=1">
+			<div class="orderStateItem active" ng-click="data.orderState=1" ng-class="({active:data.orderState>=1})">
+				<span class="orderStateName">买家下单</span>
+				<span class="orderStateLine">1</span>
+				<span class="orderStateTime">2016-09-08 09:08</span>
+			</div>
+			<div class="orderStateItem" ng-click="data.orderState=2" ng-class="({active:data.orderState>=2})">
+				<span class="orderStateName">待付款</span>
+				<span class="orderStateLine">2</span>
+				<span class="orderStateTime">2016-09-08 09:08</span>
+			</div>
+			<div class="orderStateItem" ng-click="data.orderState=3" ng-class="({active:data.orderState>=3})">
+				<span class="orderStateName">已发货</span>
+				<span class="orderStateLine">3</span>
+				<span class="orderStateTime">2016-09-08 09:08</span>
+			</div>
+			<div class="orderStateItem" ng-click="data.orderState=4" ng-class="({active:data.orderState>=4})">
+				<span class="orderStateName">已签收</span>
+				<span class="orderStateLine">4</span>
+				<span class="orderStateTime">2016-09-08 09:08</span>
+			</div>
+		</div>
+
+		<!--买家下单-->
+		<div ng-if="data.orderState==1">
+			<div class="orderStateDetail clearfix">
+				<div class="orderStateInfo fl">
+					<h5 class="orderStateTit">订单信息</h5>
+					<div>
+						<p class="info_box"><span class="info_name fl">订单编号：</span><span class="infor_val">{{orders.orderNumber}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{orders.creator}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单时间：</span><span class="infor_val">{{orders.createDate}}</span></p>
+						<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{orders.paymentMethodDesc}}</span></p>
+
+
+
+						<p class="info_box division"><span class="info_name fl">配送方式：</span><span class="infor_val">普通快递</span></p>
+						<p class="info_box"><span class="info_name fl">收货信息：</span><span class="infor_val">四川省 成都市 武侯区 高新区益州大道中段1800号 天府软件园G区, 李伟, 18980887997</span></p>
+
+						<p class="info_box division"><span class="info_name fl">买家留言：</span><span class="infor_val">的方式发生地方</span></p>
+
+
+						<!--<p class="info_box"><span class="info_name fl">订单金额：</span><span class="infor_val">{{orders.orderTotalSellPrice}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">商家优惠金额：</span><span class="infor_val">{{orders.sellerDiscount}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">使用积分数量：</span><span class="infor_val">{{orders.integral}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">优惠劵抵消金额：</span><span class="infor_val">{{orders.couponMoney}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">运费：</span><span class="infor_val">{{orders.freightPrice}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">用户应付金额：</span><span class="infor_val">{{orders.orderPayment}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">送货类型：</span><span class="infor_val">{{orders.deliveryTypeDesc}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">订单状态：</span><span class="infor_val">{{orders.orderStatusDesc}}</span></p>-->
+						<!--<p class="info_box"><span class="info_name fl">修改时间：</span><span class="infor_val">{{orders.modifyDate}}</span></p>-->
+					</div>
+				</div>
+				<div class="orderOperate">
+					<h5 class="orderStateTit">订单状态: 订单已提交，等待买家支付</h5>
+					<div class="btn_box clearfix">
+						<!--<a class="me-btn" ui-sref="me.editProducts" href="#!/products/editProducts/">修改</a>-->
+						<button class="me-btn fl" ng-click="openModal('del')">取消订单</button>
+					</div>
+					<div class="input_container">
+						<label class="input_description fl">备注</label>
+						<div class="input_box"><textarea></textarea></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="orderGoods">
+				
+				<style>
+					.orderList tr{background-color:#fff !important;}
+					/*.orderList .bindNote{vertical-align:top !important;font-size:12px;}*/
+					.orderList .bingGoods td{padding:3px 5px;}
+					.orderList .bingGoods td:first-child{border-left:1px solid #dedede;padding-left:17px;}
+					.orderList .bingGoods td:last-child{border-right:1px solid #dedede;}
+					.orderList .bingGoods.odd{background-color:#f0f0f0 !important;}
+					.orderList .bingGoods .order_goods_img{width:50px;height:50px;}
+					.orderList td.orderItemEnd{border-top:1px solid #333 !important;}
+				</style>
+				<table class="table my_table orderList">
+					<thead>
+					<tr>
+						<th style="text-align:center;">商品</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>优惠</th>
+						<th>小计</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat-start="orderGoodsItem in orderGoods" class="orderItem"  ng-class="{even:!$even,odd:!$odd}">
+						<!--<td class="bindNote" width="1em" rowspan="{{orderGoodsItem.marketingPackageTo.goodsItems.length+2}}"><span ng-if="orderGoodsItem.skuId==0||orderGoodsItem.skuId==''||orderGoodsItem.skuId==undefined">套装商品</span></td>-->
+						<td colspan="5" ng-if="orderGoodsItem.skuId==0||orderGoodsItem.skuId==''||orderGoodsItem.skuId==undefined">dfdfdsfsfgfdgdfgdf</td>
+					</tr>
+					<tr>
+						<!--<td class="bindNote" width="1em" rowspan="{{orderGoodsItem.marketingPackageTo.goodsItems.length+1}}"><span ng-if="orderGoodsItem.skuId==0||orderGoodsItem.skuId==''||orderGoodsItem.skuId==undefined">套装商品</span></td>-->
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">多发萨达萨达ddddd</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>99.99</td>
+						<td>2</td>
+						<td>-</td>
+						<td>999.99</td>
+					</tr>
+					<tr ng-repeat="bingGoodsItem in orderGoodsItem.marketingPackageTo.goodsItems" class="bingGoods" ng-class="{even:!$even,odd:!$odd}">
+					<!--<tr ng-repeat="bingGoodsItem in orderGoodsItem.marketingPackageTo.goodsItems" ng-if="skuId==0||skuId==''||skuId==undefined">-->
+						<!--<td width="1em">套装商品</td>-->
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">多发萨达萨达ddddd</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>99.99</td>
+						<td>2</td>
+						<td>-</td>
+						<td>999.99</td>
+					</tr>
+					<tr ng-repeat-end><td colspan="6" class="orderItemEnd"></td></tr>
+					
+					</tbody>
+					<tfoot>
+					<tr>
+						<td>总计</td>
+						<td colspan="4">
+							<div class="fr total_box">
+								<p style="margin-bottom:10px;text-align:left;">订单共 2 件商品</p>
+								<p>使用积分数量：<em>99</em></p>
+								<p>商品总额：<em>999999.99</em></p>
+								<p>商家优惠金额：<em>0.00</em></p>
+								<p>优惠劵抵消金额：<em>0.00</em></p>
+								<p>运费：<em>0.00</em></p>
+								<p>用户应付金额：<em>0.00</em></p>
+							</div>
+						</td>
+					</tr>
+					</tfoot>
+				</table>
+
+			</div>
+		</div>
+
+		<!--待付款-->
+		<div ng-if="data.orderState==2">
+			<div class="orderStateDetail clearfix">
+				<div class="orderStateInfo fl">
+					<h5 class="orderStateTit">订单信息</h5>
+					<div>
+						<p class="info_box"><span class="info_name fl">订单编号：</span><span class="infor_val">{{orders.orderNumber}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{orders.creator}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单时间：</span><span class="infor_val">{{orders.createDate}}</span></p>
+						<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{orders.paymentMethodDesc}}</span></p>
+
+						<p class="info_box division"><span class="info_name fl">配送方式：</span><span class="infor_val">普通快递</span></p>
+						<p class="info_box"><span class="info_name fl">收货信息：</span><span class="infor_val">四川省 成都市 武侯区 高新区益州大道中段1800号 天府软件园G区, 李伟, 18980887997</span></p>
+
+						<p class="info_box division"><span class="info_name fl">买家留言：</span><span class="infor_val">的方式发生地方</span></p>
+
+					</div>
+				</div>
+				<div class="orderOperate">
+					<h5 class="orderStateTit">订单状态: 买家已支付，等待卖家发货</h5>
+					<div class="btn_box clearfix">
+						<!--<a class="me-btn" ui-sref="me.editProducts" href="#!/products/editProducts/">修改</a>-->
+						<button class="me-btn fl" ng-click="openModal('del')">取消订单</button>
+						<button class="me-btn fl" ng-click="openModal('send')">填写发货单</button>
+					</div>
+					<div class="input_container">
+						<label class="input_description fl">备注</label>
+						<div class="input_box"><textarea></textarea></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="orderGoods">
+
+				<table class="table my_table">
+					<thead>
+					<tr>
+						<th>商品</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>优惠</th>
+						<th>小计</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">多发萨达萨达ddddd</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>99.99</td>
+						<td>2</td>
+						<td>-</td>
+						<td>999.99</td>
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+						<td>总计</td>
+						<td colspan="4">
+							<div class="fr total_box">
+								<p style="margin-bottom:10px;text-align:left;">订单共 2 件商品</p>
+								<p>使用积分数量：<em>99</em></p>
+								<p>商品总额：<em>999999.99</em></p>
+								<p>商家优惠金额：<em>0.00</em></p>
+								<p>优惠劵抵消金额：<em>0.00</em></p>
+								<p>运费：<em>0.00</em></p>
+								<p>用户应付金额：<em>0.00</em></p>
+							</div>
+						</td>
+					</tr>
+					</tfoot>
+				</table>
+
+			</div>
+		</div>
+
+		<!--代发货-->
+		<div ng-if="data.orderState==3">
+			<div class="orderStateDetail clearfix">
+				<div class="orderStateInfo fl">
+					<h5 class="orderStateTit">订单信息</h5>
+					<div>
+						<p class="info_box"><span class="info_name fl">订单编号：</span><span class="infor_val">{{orders.orderNumber}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{orders.creator}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单时间：</span><span class="infor_val">{{orders.createDate}}</span></p>
+						<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{orders.paymentMethodDesc}}</span></p>
+
+						<p class="info_box division"><span class="info_name fl">配送方式：</span><span class="infor_val">普通快递</span></p>
+						<p class="info_box"><span class="info_name fl">收货信息：</span><span class="infor_val">四川省 成都市 武侯区 高新区益州大道中段1800号 天府软件园G区, 李伟, 18980887997</span></p>
+
+						<p class="info_box division"><span class="info_name fl">买家留言：</span><span class="infor_val">的方式发生地方</span></p>
+					</div>
+				</div>
+				<div class="orderOperate">
+					<h5 class="orderStateTit">订单状态: 卖家已发货，等待买家签收</h5>
+					<div class="btn_box clearfix">
+						<!--<a class="me-btn" ui-sref="me.editProducts" href="#!/products/editProducts/">修改</a>-->
+						<button class="me-btn fl" ng-click="openModal('editSend')">修改物流</button>
+					</div>
+					<div class="input_container">
+						<label class="input_description fl">备注</label>
+						<div class="input_box"><textarea></textarea></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="orderGoods">
+
+				<table class="table my_table orderTable">
+					<thead>
+					<tr>
+						<th>包裹</th>
+						<th>商品</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>优惠</th>
+						<th>小计</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="packageItem" ng-repeat-start="item in sandOrders">
+						<td class="package" rowspan="{{item.orderItems.length+item.orderItems.orderItemTo.marketingPackageTo.goodsItems.length+4}}">{{'包裹1'}}</td>
+						<td>{{item.operatorName}} 运单号：{{item.trackingNo}}</td>
+						<td colspan="4"><a href="">更多</a></td>
+					</tr>
+					<tr class="goodsItem" ng-class="{even:!$even,odd:!$odd}" ng-repeat-start="GItem in item.orderItems">
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">{{GItem.orderItemTo.name}}</a>
+								<p class="goods_style">{{GItem.orderItemTo.saleAttrStr}}</p>
+							</div>
+						</td>
+						<td>{{GItem.orderItemTo.skuSellPrice}}</td>
+						<td>{{GItem.orderItemTo.skuQty}}</td>
+						<td>{{(GItem.orderItemTo.goodsPre==0?'-':GItem.goodsPre)}}</td>
+						<td>999.99</td>
+					</tr>
+					<tr ng-repeat="MItem in GItem.orderItemTo.marketingPackageTo.goodsItems">
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">{{MItem.sku.productName}}</a>
+								<p class="goods_style">{{MItem.sku.saleAttrStr}}</p>
+							</div>
+						</td>
+						<td>{{MItem.skuSellPrice}}</td>
+						<td>{{MItem.skuQty}}</td>
+						<td>{{(MItem.goodsPre==0?'-':GItem.goodsPre)}}</td>
+						<td>999.99</td>
+					</tr>
+					<tr ng-repeat-end><td colspan="5"></td></tr>
+					<tr class="engItem" ng-repeat-end><td colspan="6"></td></tr>
+					</tbody>
+					<tfoot>
+					<tr>
+						<td>总计</td>
+						<td colspan="4">
+							<div class="fr total_box">
+								<p style="margin-bottom:10px;text-align:left;">订单共 2 件商品</p>
+								<p>使用积分数量：<em>99</em></p>
+								<p>商品总额：<em>999999.99</em></p>
+								<p>商家优惠金额：<em>0.00</em></p>
+								<p>优惠劵抵消金额：<em>0.00</em></p>
+								<p>运费：<em>0.00</em></p>
+								<p>用户应付金额：<em>0.00</em></p>
+							</div>
+						</td>
+					</tr>
+					</tfoot>
+				</table>
+
+			</div>
+		</div>
+
+		<!--已完成-->
+		<div ng-if="data.orderState==4">
+			<div class="orderStateDetail clearfix">
+				<div class="orderStateInfo fl">
+					<h5 class="orderStateTit">订单信息</h5>
+					<div>
+						<p class="info_box"><span class="info_name fl">订单编号：</span><span class="infor_val">{{orders.orderNumber}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{orders.creator}}</span></p>
+						<p class="info_box"><span class="info_name fl">下单时间：</span><span class="infor_val">{{orders.createDate}}</span></p>
+						<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{orders.paymentMethodDesc}}</span></p>
+
+						<p class="info_box division"><span class="info_name fl">配送方式：</span><span class="infor_val">普通快递</span></p>
+						<p class="info_box"><span class="info_name fl">收货信息：</span><span class="infor_val">四川省 成都市 武侯区 高新区益州大道中段1800号 天府软件园G区, 李伟, 18980887997</span></p>
+
+						<p class="info_box division"><span class="info_name fl">买家留言：</span><span class="infor_val">的方式发生地方</span></p>
+					</div>
+				</div>
+				<div class="orderOperate">
+					<h5 class="orderStateTit">订单状态: 买家已签收，交易完成</h5>
+					<div class="btn_box clearfix">
+						<!--<a class="me-btn" ui-sref="me.editProducts" href="#!/products/editProducts/">修改</a>-->
+						<!--<button class="me-btn fl" ng-click="openModal('del')">取消订单</button>-->
+					</div>
+					<div class="input_container">
+						<label class="input_description fl">备注</label>
+						<div class="input_box"><textarea></textarea></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="orderGoods">
+
+				<table class="table my_table orderTable">
+					<thead>
+					<tr>
+						<th>包裹</th>
+						<th>商品</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>优惠</th>
+						<th>小计</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="packageItem" ng-repeat-start="item in sandOrders.tectonicData">
+						<td class="package" rowspan="{{item.expressGoods.length+1}}">{{item.packageName}}</td>
+						<td>{{item.express}} 运单号：{{item.expressId}}</td>
+						<td colspan="4"><a href="">更多</a></td>
+					</tr>
+					<tr class="goodsItem" ng-class="{even:!$even,odd:!$odd}" ng-repeat="GItem in item.expressGoods">
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">{{GItem.goodsName}}</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>{{GItem.goodsPrice}}</td>
+						<td>{{GItem.goodsNum}}</td>
+						<td>{{(GItem.goodsPre==0?'-':GItem.goodsPre)}}</td>
+						<td>999.99</td>
+					</tr>
+					<tr class="engItem" ng-repeat-end>
+						<td colspan="6"></td>
+					</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+						<td>总计</td>
+						<td colspan="4">
+							<div class="fr total_box">
+								<p style="margin-bottom:10px;text-align:left;">订单共 2 件商品</p>
+								<p>使用积分数量：<em>99</em></p>
+								<p>商品总额：<em>999999.99</em></p>
+								<p>商家优惠金额：<em>0.00</em></p>
+								<p>优惠劵抵消金额：<em>0.00</em></p>
+								<p>运费：<em>0.00</em></p>
+								<p>用户应付金额：<em>0.00</em></p>
+							</div>
+						</td>
+					</tr>
+					</tfoot>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</div>

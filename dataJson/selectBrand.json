@@ -1,0 +1,92 @@
+{
+  "content": [
+    {
+      "children": [],
+      "code": "1-3360-3383",
+      "coverPath": "",
+      "delete": false,
+      "id": 3383,
+      "introduction": "",
+      "itemIndex": 22,
+      "mapTreeTypeValue": 5,
+      "name": "V",
+      "parentId": 3360,
+      "parentName": "产品品牌",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "V"
+    },
+    {
+      "children": [],
+      "code": "1-3360-3382",
+      "coverPath": "",
+      "delete": false,
+      "id": 3382,
+      "introduction": "",
+      "itemIndex": 21,
+      "mapTreeTypeValue": 5,
+      "name": "U",
+      "parentId": 3360,
+      "parentName": "产品品牌",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "U"
+    },
+    {
+      "children": [],
+      "code": "1-3360-3375",
+      "coverPath": "",
+      "delete": false,
+      "id": 3375,
+      "introduction": "",
+      "itemIndex": 14,
+      "mapTreeTypeValue": 5,
+      "name": "N",
+      "parentId": 3360,
+      "parentName": "产品品牌",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "N"
+    },
+    {
+      "children": [],
+      "code": "1-3360-3374",
+      "coverPath": "",
+      "delete": false,
+      "id": 3374,
+      "introduction": "",
+      "itemIndex": 13,
+      "mapTreeTypeValue": 5,
+      "name": "M",
+      "parentId": 3360,
+      "parentName": "产品品牌",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "M"
+    },
+    {
+      "children": [],
+      "code": "1-3360-3370",
+      "coverPath": "",
+      "delete": false,
+      "id": 3370,
+      "introduction": "",
+      "itemIndex": 9,
+      "mapTreeTypeValue": 5,
+      "name": "I",
+      "parentId": 3360,
+      "parentName": "产品品牌",
+      "relation": "",
+      "rule": "",
+      "stateTypeValue": 1,
+      "title": "I"
+    }
+  ],
+  "header": {
+    "flag": 1
+  }
+}

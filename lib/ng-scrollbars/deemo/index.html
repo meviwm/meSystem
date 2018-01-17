@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<title>ng-scrollbars 0.0.7 by Minh Nguyen</title>
+	<link rel="stylesheet" href="styles.css">
+	
+	<!-- external -->
+	<link rel="stylesheet" href="../jquery.mCustomScrollbar.min.css" type="text/css"/>
+	<script src="../../jquery.min.js"></script>
+	<script src="../../angularjs-1.6.1/angular.min.js"></script>
+	<script src="../jquery.mCustomScrollbar.js"></script>
+	<script src="../scrollbars.js"></script>
+	
+	<!-- internal -->
+	<script src="highlight.js"></script>
+	<script src="script.js"></script>
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+<body ng-app="mainModule" ng-strict-di>
+
+<div class="wrapper">
+	<section>
+		<div id="title">
+			<h1><a href="https://github.com/iominh/ng-scrollbars">ng-scrollbars</a></h1>
+			
+			<p>Angular wrapper of Malihu&#39;s jQuery Custom Scrollbar</p>
+			<hr>
+			<span class="credits left">Maintained by <a href="http://www.minh.io">Minh Nguyen</a>, original by
+                    <a href="http://manos.malihu.gr/jquery-custom-content-scroller/">Malihu</a></span>
+			<span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a
+					href="https://twitter.com/michigangraham">mattgraham</a></span>
+		</div>
+	</section>
+	
+	<!--[if !IE]>
+	<script>fixScale(document);</script><![endif]-->
+</div>
+
+<div class="panel-container" ng-controller="mainCtrl">
+	<div class="panel" ng-repeat="panel in panels"
+		 ng-class="panel.cssClasses"
+		 ng-scrollbars
+		 ng-scrollbars-config="panel.config">
+		<h2>
+			{{panel.title}}
+		</h2>
+		<hr>
+		<p>
+			{{panel.text}}
+		</p>
+	</div>
+</div>
+
+</body>
+</html>

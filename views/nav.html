@@ -1,0 +1,40 @@
+<div class="sub_nav_box" ng-show="currentNav!=''&&currentNav!=undefined">
+	<ul class="navAni nav_list" ng-show="currentNav=='userAdmin'">
+		<li class="nav_item"><a ng-class="hasActive(ch,'userData')" ui-sref="me.userData">用户资料</a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'poster')" ui-sref="me.poster">代言人</a></li>
+	</ul>
+	<ul class="navAni nav_list" ng-show="currentNav=='products'">
+		<li class="nav_item"><a ng-class="hasActive(ch,'products')" ui-sref="me.products">商品</a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'commodity')" ui-sref="me.commodity">SKU</a></li>
+	</ul>
+	<ul class="navAni nav_list" ng-show="currentNav=='sale'">
+		<li class="nav_item"><a ng-class="hasActive(ch,'orders')" ui-sref="me.orders">订单</a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'sellOrder')" ui-sref="me.sellOrder">销售单</a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'purchaseOrder')" ui-sref="me.purchaseOrder">采购单</a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'invoice')" ui-sref="me.invoice">发货单</a></li>
+	</ul>
+	<ul class="navAni nav_list" ng-show="currentNav=='roleAuthority'">
+		<li class="nav_item"><a ng-class="hasActive(ch,'role')" ui-sref="me.role">角色</a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'authority')" ui-sref="me.authority">权限维护</a></li>
+	</ul>
+	<ul class="navAni nav_list" ng-show="currentNav=='systemParameter'">
+		<li class="nav_item"><a ng-class="hasActive(ch,'systemParameter')" ui-sref="me.systemParameter">码表</a></li>
+	</ul>
+</div>
+<div class="main_nav_box">
+	<ul class="nav_list">
+		<li class="nav_item"><a ng-class="hasActive(ch,'home')" ng-click="selectedNav()" ui-sref="me.home"><i class="fa fa-home"></i>HOME<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'visualization')" ng-click="selectedNav()" ui-sref="me.visualization"><i class="fa fa-home"></i>可视化界面UI<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'visualization2')" ng-click="selectedNav()" ui-sref="me.visualization2"><i class="fa fa-home"></i>可视化界面UI2<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'visualization3')" ng-click="selectedNav()" ui-sref="me.visualization3"><i class="fa fa-home"></i>可视化界面UI3<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'administrate')" ng-click="selectedNav()" ui-sref="me.administrate"><i class="fa fa-user-secret"></i>后台用户管理<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="{active:currentNav=='userAdmin'}" ui-sref="me.userData" ng-click="selectedNav('userAdmin')"><i class="fa  fa-user-o"></i>普通用户管理<i class="arrow fa fa-angle-right"></i></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'column')" ng-click="selectedNav()" ui-sref="me.column"><i class="fa fa-reorder"></i>栏目管理<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="{active:currentNav=='products'}" ui-sref="me.products" ng-click="selectedNav('products')"><i class="fa fa-object-group"></i>商品管理<i class="arrow fa fa-angle-right"></i></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'supplier')" ng-click="selectedNav()" ui-sref="me.supplier"><i class="fa fa-snowflake-o"></i>供应商管理<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="{active:currentNav=='sale'}" ui-sref="me.orders" ng-click="selectedNav('sale')"><i class="fa fa-microchip"></i>销售管理<i class="arrow fa fa-angle-right"></i></a></li>
+		<li class="nav_item"><a ng-class="hasActive(ch,'marketing')" ng-click="selectedNav()" ui-sref="me.marketing"><i class="fa fa-home"></i>营销<!--<i class="arrow fa fa-angle-right"></i>--></a></li>
+		<li class="nav_item"><a ng-class="{active:currentNav=='roleAuthority'}" ui-sref="me.role" ng-click="selectedNav('roleAuthority')"><i class="fa fa-sitemap"></i>角色权限管理<i class="arrow fa fa-angle-right"></i></a></li>
+		<li class="nav_item"><a ng-class="{active:currentNav=='systemParameter'}" ui-sref="me.systemParameter" ng-click="selectedNav('systemParameter')"><i class="fa fa-gear"></i>系统参数管理<i class="arrow fa fa-angle-right"></i></a></li>
+	</ul>
+</div>

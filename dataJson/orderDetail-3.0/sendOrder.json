@@ -1,0 +1,908 @@
+{
+  "couponDetails": [],
+  "couponMoney": 0,
+  "createDate": "2017-03-06 18:09:35",
+  "creator": "aaaaaaaaaaaaaaaaaaaa",
+  "creatorName": "aaaaaaaaaaaaaaaaaaaa",
+  "deliveryTypeDesc": "",
+  "deliveryTypeValue": 0,
+  "freightPrice": 0,
+  "id": 2,
+  "integral": 0,
+  "invoiceInfo": "否",
+  "invoiceTo": null,
+  "modifier": "",
+  "modifierName": "",
+  "modifyDate": "",
+  "orderItems": [
+    {
+      "id": 2,
+      "itemStatusDesc": "",
+      "marketingPackageTo": null,
+      "name": "老人头（LAORENTOU）新款时尚牛皮斜挎包女士手提单肩真皮女包958J120L",
+      "outSkuId": "",
+      "productId": 2,
+      "saleAttr": [
+        {
+          "key": "颜色",
+          "keyId": "3",
+          "value": "黑色",
+          "valueId": "12"
+        }
+      ],
+      "saleAttrStr": "颜色,3,黑色,12,",
+      "skuCoverTo": {
+        "id": 5,
+        "path": "/vandafile/platform/commodity/picture/201703/1488777851471_-371670695.png",
+        "skuId": 5
+      },
+      "skuId": 5,
+      "skuListPrice": 389,
+      "skuQty": 1,
+      "skuSellPrice": 389,
+      "trackingNo": ""
+    },
+    {
+      "id": 3,
+      "itemStatusDesc": "",
+      "marketingPackageTo": null,
+      "name": "Avency2017新款单肩女包 欧美女士包包春季上新真皮手提斜挎包",
+      "outSkuId": "",
+      "productId": 4,
+      "saleAttr": [
+        {
+          "key": "颜色",
+          "keyId": "3",
+          "value": "浅蓝色",
+          "valueId": "36"
+        }
+      ],
+      "saleAttrStr": "颜色,3,浅蓝色,36,",
+      "skuCoverTo": {
+        "id": 11,
+        "path": "/vandafile/platform/commodity/picture/201703/1488778309003_-1258124647.png",
+        "skuId": 11
+      },
+      "skuId": 11,
+      "skuListPrice": 259,
+      "skuQty": 1,
+      "skuSellPrice": 259,
+      "trackingNo": ""
+    },
+    {
+      "id": 4,
+      "itemStatusDesc": "已发货",
+      "marketingPackageTo": {
+        "beginDate": "2017-03-05 00:00:00",
+        "buyQty": 0,
+        "coupon": false,
+        "coverPath": "/vandafile/platform/commodity/picture/201703/1488779037619_-1060959591.png",
+        "createDate": "2017-03-06 13:50:07",
+        "creatorId": 1,
+        "creatorName": "admin",
+        "del": false,
+        "endDate": "",
+        "id": 1,
+        "introduction": "",
+        "modifierId": 0,
+        "modifierName": "",
+        "modifyDate": "",
+        "name": "情人节",
+        "num": 5,
+        "originalPrice": 3599,
+        "points": true,
+        "productTo": {
+          "attributes": "",
+          "brandId": 15489,
+          "brandName": "2ND ONE",
+          "briefIn": "",
+          "categoryId": 4,
+          "categoryLevelName": "",
+          "categoryName": "腰带",
+          "cover": "/vandafile/platform/commodity/picture/201703/1488779037619_-1060959591.png",
+          "createDate": "2017-03-06 13:45:21",
+          "creatorName": "平台管理员",
+          "del": 0,
+          "delHtml": "<font color='green'>未删除</font>",
+          "downSaleDate": "2017-04-01 00:00:00",
+          "id": 8,
+          "listPrice": 3599,
+          "modifierName": "平台管理员",
+          "modifyDate": "2017-03-06 13:45:45",
+          "name": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+          "onSaleDate": "2017-03-02 00:00:00",
+          "parentBrandId": 0,
+          "parentBrandName": "",
+          "productBigDataTos": [],
+          "productCoverTos": [],
+          "productLableTos": [],
+          "productStatusId": 2,
+          "productStatusName": "已发布",
+          "purchasePrice": 0,
+          "saleAttrName": [],
+          "sellPrice": 3599,
+          "skuIds": "",
+          "skus": [],
+          "statusHtml": "<font color='green'>已发布</font>",
+          "stockNum": 20
+        },
+        "purchaseQty": 1,
+        "salePrice": 3500,
+        "select": false,
+        "time": "2017-03-06 13:50:07",
+        "title": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+        "typeDesc": "促销活动",
+        "typeValue": "s"
+      },
+      "name": "意大利L'ALPINA袋鼠单肩包女大容量欧美牛皮女包小时尚机车包2017秋季新品包包",
+      "outSkuId": "",
+      "productId": 1,
+      "saleAttr": [
+        {
+          "key": "颜色",
+          "keyId": "3",
+          "value": "红色",
+          "valueId": "16"
+        },
+        {
+          "key": "尺码",
+          "keyId": "4",
+          "value": "L",
+          "valueId": "6"
+        }
+      ],
+      "saleAttrStr": "颜色,3,红色,16,尺码,4,L,6,",
+      "skuCoverTo": {
+        "id": 2,
+        "path": "/vandafile/platform/commodity/picture/201703/1488777663561_-1886042468.png",
+        "skuId": 2
+      },
+      "skuId": 2,
+      "skuListPrice": 3500,
+      "skuQty": 1,
+      "skuSellPrice": 3500,
+      "trackingNo": "1231231231234544"
+    },
+    {
+      "id": 5,
+      "itemStatusDesc": "已发货",
+      "marketingPackageTo": {
+        "beginDate": "2017-03-05 00:00:00",
+        "buyQty": 2,
+        "coupon": false,
+        "cover": "/vandafile/platform/commodity/picture/201703/1488779930908_-1060959591.png",
+        "coverPath": "/vandafile/platform/commodity/picture/201703/1488779930908_-1060959591.png",
+        "createDate": "2017-03-06 13:58:53",
+        "creatorId": 1,
+        "creatorName": "admin",
+        "del": false,
+        "endDate": "",
+        "goodsItems": [
+          {
+            "num": 1,
+            "sku": {
+              "categoryId": 257,
+              "cover": "/vandafile/platform/commodity/picture/201703/1488778882598_514238360.png",
+              "createDate": "2017-03-06 13:41:55",
+              "del": false,
+              "downSaleDate": "2017-04-07 00:00:00",
+              "id": 20,
+              "listPrice": 499,
+              "lockStock": 0,
+              "modifyDate": "",
+              "onSaleDate": "2017-02-26 00:00:00",
+              "productBrandId": 15137,
+              "productBrandName": "LA MARTINA",
+              "productCategroyId": 257,
+              "productCategroyName": "手拿包",
+              "productId": 7,
+              "productName": "伊米妮女包 牛皮宽肩带时尚风琴褶多隔层休闲斜挎单肩包",
+              "purchasePrice": 0,
+              "saleAttr": [
+                {
+                  "key": "颜色",
+                  "keyId": "3",
+                  "value": "草绿色",
+                  "valueId": "24"
+                }
+              ],
+              "sellPrice": 499,
+              "skuCoverTos": [],
+              "sourceSaleAttr": "",
+              "stockNum": 8
+            }
+          },
+          {
+            "num": 1,
+            "sku": {
+              "categoryId": 4,
+              "cover": "/vandafile/platform/commodity/picture/201703/1488779090443_-1060959591.png",
+              "createDate": "2017-03-06 13:45:21",
+              "del": false,
+              "downSaleDate": "2017-04-01 00:00:00",
+              "id": 22,
+              "listPrice": 3599,
+              "lockStock": 0,
+              "modifyDate": "",
+              "onSaleDate": "2017-03-02 00:00:00",
+              "productBrandId": 15489,
+              "productBrandName": "2ND ONE",
+              "productCategroyId": 4,
+              "productCategroyName": "腰带",
+              "productId": 8,
+              "productName": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+              "purchasePrice": 0,
+              "saleAttr": [
+                {
+                  "key": "颜色",
+                  "keyId": "3",
+                  "value": "深蓝色",
+                  "valueId": "32"
+                },
+                {
+                  "key": "尺码",
+                  "keyId": "4",
+                  "value": "30",
+                  "valueId": "58"
+                }
+              ],
+              "sellPrice": 3599,
+              "skuCoverTos": [],
+              "sourceSaleAttr": "",
+              "stockNum": 8
+            }
+          }
+        ],
+        "id": 8,
+        "introduction": "",
+        "modifierId": 2,
+        "modifierName": "fddddddd",
+        "modifyDate": "2017-03-07 17:05:42",
+        "name": "套装",
+        "num": 5,
+        "originalPrice": 4098,
+        "points": false,
+        "purchaseQty": 5,
+        "salePrice": 8000,
+        "select": false,
+        "time": "2017-03-06 13:58:53",
+        "title": "套装",
+        "typeDesc": "搭配套餐",
+        "typeValue": "c"
+      },
+      "name": "",
+      "outSkuId": "",
+      "productId": 0,
+      "saleAttr": [],
+      "saleAttrStr": "",
+      "skuCoverTo": null,
+      "skuId": 0,
+      "skuListPrice": 8000,
+      "skuQty": 1,
+      "skuSellPrice": 8000,
+      "trackingNo": "1231231231234544"
+    }
+  ],
+  "orderLogs": [
+    {
+      "id": 4,
+      "operationDate": "2017-03-06 18:09:35",
+      "operatorId": 1,
+      "operatorMetaValue": "user",
+      "operatorName": "aaaaaaaaaaaaaaaaa",
+      "orderId": 2,
+      "orderNumber": "C2017030600002",
+      "orderStatusDesc": "待支付",
+      "orderStatusValue": 1
+    },
+    {
+      "id": 5,
+      "operationDate": "2017-03-06 18:11:06",
+      "operatorId": 1,
+      "operatorMetaValue": "operator",
+      "operatorName": "admin",
+      "orderId": 2,
+      "orderNumber": "C2017030600002",
+      "orderStatusDesc": "待发货",
+      "orderStatusValue": 2
+    },
+    {
+      "id": 12,
+      "operationDate": "2017-03-08 18:37:28",
+      "operatorId": 1,
+      "operatorMetaValue": "operator",
+      "operatorName": "admin",
+      "orderId": 2,
+      "orderNumber": "C2017030600002",
+      "orderStatusDesc": "已发货",
+      "orderStatusValue": 3
+    }
+  ],
+  "orderNumber": "C2017030600002",
+  "orderPayment": 9047,
+  "orderStatusDesc": "已发货",
+  "orderStatusValue": 3,
+  "orderTotalPrice": 9047,
+  "orderTotalSellPrice": 9047,
+  "orderUserTo": {
+    "address": "333333333333333",
+    "area": "东丽区",
+    "corriere": "",
+    "name": "33",
+    "notes": "该买家没有留言",
+    "parentArea": "天津市",
+    "parentParentArea": "地区",
+    "phone": "13111111111",
+    "zipcode": ""
+  },
+  "paymentMethodDesc": "支付宝支付",
+  "paymentMethodValue": 11,
+  "realReceives": [
+    {
+      "amount": 9047,
+      "id": 2,
+      "orderNumber": "C2017030600002",
+      "payDate": "2017-03-06 18:11:05",
+      "payPerson": "test",
+      "payTypeDesc": "支付宝支付",
+      "payTypeValue": 11,
+      "proof": "test123456",
+      "remark": "意大利L'ALPINA袋鼠单肩包女大容量欧美牛皮女包小时尚机车包2017秋季新品包包 老人头（LAORENTOU）新款时尚牛皮斜挎包女士手提单肩真皮女包958J120L 套装 Avency2017新款单肩女包 欧美女士包包春季上新真皮手提斜挎包",
+      "userId": 1,
+      "userName": "ec56",
+      "userType": "user"
+    }
+  ],
+  "remark": "",
+  "sellOrders": [
+    {
+      "amount": 9047,
+      "comment": "",
+      "createDate": "2017-03-06 18:11:05",
+      "id": 3,
+      "modifierName": "",
+      "modifyDate": "",
+      "operatorId": 1,
+      "operatorName": "aaaaaaaaaaaaaaaaa",
+      "orderNumber": "C2017030600002",
+      "paymentMethodDesc": "支付宝支付",
+      "sellOrderItems": [
+        {
+          "id": 2,
+          "orderItemTo": {
+            "id": 2,
+            "itemStatusDesc": "",
+            "marketingPackageTo": null,
+            "name": "老人头（LAORENTOU）新款时尚牛皮斜挎包女士手提单肩真皮女包958J120L",
+            "outSkuId": "",
+            "productId": 2,
+            "saleAttr": [
+              {
+                "key": "颜色",
+                "keyId": "3",
+                "value": "黑色",
+                "valueId": "12"
+              }
+            ],
+            "saleAttrStr": "颜色,3,黑色,12,",
+            "skuCoverTo": {
+              "id": 5,
+              "path": "/vandafile/platform/commodity/picture/201703/1488777851471_-371670695.png",
+              "skuId": 5
+            },
+            "skuId": 5,
+            "skuListPrice": 389,
+            "skuQty": 1,
+            "skuSellPrice": 389,
+            "trackingNo": ""
+          },
+          "skuQty": 1
+        },
+        {
+          "id": 3,
+          "orderItemTo": {
+            "id": 4,
+            "itemStatusDesc": "已发货",
+            "marketingPackageTo": {
+              "beginDate": "2017-03-05 00:00:00",
+              "buyQty": 0,
+              "coupon": false,
+              "coverPath": "/vandafile/platform/commodity/picture/201703/1488779037619_-1060959591.png",
+              "createDate": "2017-03-06 13:50:07",
+              "creatorId": 1,
+              "creatorName": "admin",
+              "del": false,
+              "endDate": "",
+              "id": 1,
+              "introduction": "",
+              "modifierId": 0,
+              "modifierName": "",
+              "modifyDate": "",
+              "name": "情人节",
+              "num": 5,
+              "originalPrice": 3599,
+              "points": true,
+              "productTo": {
+                "attributes": "",
+                "brandId": 15489,
+                "brandName": "2ND ONE",
+                "briefIn": "",
+                "categoryId": 4,
+                "categoryLevelName": "",
+                "categoryName": "腰带",
+                "cover": "/vandafile/platform/commodity/picture/201703/1488779037619_-1060959591.png",
+                "createDate": "2017-03-06 13:45:21",
+                "creatorName": "平台管理员",
+                "del": 0,
+                "delHtml": "<font color='green'>未删除</font>",
+                "downSaleDate": "2017-04-01 00:00:00",
+                "id": 8,
+                "listPrice": 3599,
+                "modifierName": "平台管理员",
+                "modifyDate": "2017-03-06 13:45:45",
+                "name": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+                "onSaleDate": "2017-03-02 00:00:00",
+                "parentBrandId": 0,
+                "parentBrandName": "",
+                "productBigDataTos": [],
+                "productCoverTos": [],
+                "productLableTos": [],
+                "productStatusId": 2,
+                "productStatusName": "已发布",
+                "purchasePrice": 0,
+                "saleAttrName": [],
+                "sellPrice": 3599,
+                "skuIds": "",
+                "skus": [],
+                "statusHtml": "<font color='green'>已发布</font>",
+                "stockNum": 20
+              },
+              "purchaseQty": 1,
+              "salePrice": 3500,
+              "select": false,
+              "time": "2017-03-06 13:50:07",
+              "title": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+              "typeDesc": "促销活动",
+              "typeValue": "s"
+            },
+            "name": "意大利L'ALPINA袋鼠单肩包女大容量欧美牛皮女包小时尚机车包2017秋季新品包包",
+            "outSkuId": "",
+            "productId": 1,
+            "saleAttr": [
+              {
+                "key": "颜色",
+                "keyId": "3",
+                "value": "红色",
+                "valueId": "16"
+              },
+              {
+                "key": "尺码",
+                "keyId": "4",
+                "value": "L",
+                "valueId": "6"
+              }
+            ],
+            "saleAttrStr": "颜色,3,红色,16,尺码,4,L,6,",
+            "skuCoverTo": {
+              "id": 2,
+              "path": "/vandafile/platform/commodity/picture/201703/1488777663561_-1886042468.png",
+              "skuId": 2
+            },
+            "skuId": 2,
+            "skuListPrice": 3500,
+            "skuQty": 1,
+            "skuSellPrice": 3500,
+            "trackingNo": "1231231231234544"
+          },
+          "skuQty": 1
+        },
+        {
+          "id": 4,
+          "orderItemTo": {
+            "id": 5,
+            "itemStatusDesc": "已发货",
+            "marketingPackageTo": {
+              "beginDate": "2017-03-05 00:00:00",
+              "buyQty": 2,
+              "coupon": false,
+              "cover": "/vandafile/platform/commodity/picture/201703/1488779930908_-1060959591.png",
+              "coverPath": "/vandafile/platform/commodity/picture/201703/1488779930908_-1060959591.png",
+              "createDate": "2017-03-06 13:58:53",
+              "creatorId": 1,
+              "creatorName": "admin",
+              "del": false,
+              "endDate": "",
+              "goodsItems": [
+                {
+                  "num": 1,
+                  "sku": {
+                    "categoryId": 257,
+                    "cover": "/vandafile/platform/commodity/picture/201703/1488778882598_514238360.png",
+                    "createDate": "2017-03-06 13:41:55",
+                    "del": false,
+                    "downSaleDate": "2017-04-07 00:00:00",
+                    "id": 20,
+                    "listPrice": 499,
+                    "lockStock": 0,
+                    "modifyDate": "",
+                    "onSaleDate": "2017-02-26 00:00:00",
+                    "productBrandId": 15137,
+                    "productBrandName": "LA MARTINA",
+                    "productCategroyId": 257,
+                    "productCategroyName": "手拿包",
+                    "productId": 7,
+                    "productName": "伊米妮女包 牛皮宽肩带时尚风琴褶多隔层休闲斜挎单肩包",
+                    "purchasePrice": 0,
+                    "saleAttr": [
+                      {
+                        "key": "颜色",
+                        "keyId": "3",
+                        "value": "草绿色",
+                        "valueId": "24"
+                      }
+                    ],
+                    "sellPrice": 499,
+                    "skuCoverTos": [],
+                    "sourceSaleAttr": "",
+                    "stockNum": 8
+                  }
+                },
+                {
+                  "num": 1,
+                  "sku": {
+                    "categoryId": 4,
+                    "cover": "/vandafile/platform/commodity/picture/201703/1488779090443_-1060959591.png",
+                    "createDate": "2017-03-06 13:45:21",
+                    "del": false,
+                    "downSaleDate": "2017-04-01 00:00:00",
+                    "id": 22,
+                    "listPrice": 3599,
+                    "lockStock": 0,
+                    "modifyDate": "",
+                    "onSaleDate": "2017-03-02 00:00:00",
+                    "productBrandId": 15489,
+                    "productBrandName": "2ND ONE",
+                    "productCategroyId": 4,
+                    "productCategroyName": "腰带",
+                    "productId": 8,
+                    "productName": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+                    "purchasePrice": 0,
+                    "saleAttr": [
+                      {
+                        "key": "颜色",
+                        "keyId": "3",
+                        "value": "深蓝色",
+                        "valueId": "32"
+                      },
+                      {
+                        "key": "尺码",
+                        "keyId": "4",
+                        "value": "30",
+                        "valueId": "58"
+                      }
+                    ],
+                    "sellPrice": 3599,
+                    "skuCoverTos": [],
+                    "sourceSaleAttr": "",
+                    "stockNum": 8
+                  }
+                }
+              ],
+              "id": 8,
+              "introduction": "",
+              "modifierId": 2,
+              "modifierName": "fddddddd",
+              "modifyDate": "2017-03-07 17:05:42",
+              "name": "套装",
+              "num": 5,
+              "originalPrice": 4098,
+              "points": false,
+              "purchaseQty": 5,
+              "salePrice": 8000,
+              "select": false,
+              "time": "2017-03-06 13:58:53",
+              "title": "套装",
+              "typeDesc": "搭配套餐",
+              "typeValue": "c"
+            },
+            "name": "",
+            "outSkuId": "",
+            "productId": 0,
+            "saleAttr": [],
+            "saleAttrStr": "",
+            "skuCoverTo": null,
+            "skuId": 0,
+            "skuListPrice": 8000,
+            "skuQty": 1,
+            "skuSellPrice": 8000,
+            "trackingNo": "1231231231234544"
+          },
+          "skuQty": 1
+        },
+        {
+          "id": 5,
+          "orderItemTo": {
+            "id": 3,
+            "itemStatusDesc": "",
+            "marketingPackageTo": null,
+            "name": "Avency2017新款单肩女包 欧美女士包包春季上新真皮手提斜挎包",
+            "outSkuId": "",
+            "productId": 4,
+            "saleAttr": [
+              {
+                "key": "颜色",
+                "keyId": "3",
+                "value": "浅蓝色",
+                "valueId": "36"
+              }
+            ],
+            "saleAttrStr": "颜色,3,浅蓝色,36,",
+            "skuCoverTo": {
+              "id": 11,
+              "path": "/vandafile/platform/commodity/picture/201703/1488778309003_-1258124647.png",
+              "skuId": 11
+            },
+            "skuId": 11,
+            "skuListPrice": 259,
+            "skuQty": 1,
+            "skuSellPrice": 259,
+            "trackingNo": ""
+          },
+          "skuQty": 1
+        }
+      ],
+      "sellOrderNumber": "",
+      "sendOrder": [
+        {
+          "corriereType": "bbb",
+          "createDate": "2017-03-08 18:37:27",
+          "deliveryDate": "2017-03-08 18:37:25",
+          "id": 2,
+          "modifierName": "",
+          "modifyDate": "",
+          "operatorName": "admin",
+          "orderItems": [
+            {
+              "id": 1,
+              "orderItemTo": {
+                "id": 5,
+                "itemStatusDesc": "已发货",
+                "marketingPackageTo": {
+                  "beginDate": "2017-03-05 00:00:00",
+                  "buyQty": 2,
+                  "coupon": false,
+                  "cover": "/vandafile/platform/commodity/picture/201703/1488779930908_-1060959591.png",
+                  "coverPath": "/vandafile/platform/commodity/picture/201703/1488779930908_-1060959591.png",
+                  "createDate": "2017-03-06 13:58:53",
+                  "creatorId": 1,
+                  "creatorName": "admin",
+                  "del": false,
+                  "endDate": "",
+                  "goodsItems": [
+                    {
+                      "num": 1,
+                      "sku": {
+                        "categoryId": 257,
+                        "cover": "/vandafile/platform/commodity/picture/201703/1488778882598_514238360.png",
+                        "createDate": "2017-03-06 13:41:55",
+                        "del": false,
+                        "downSaleDate": "2017-04-07 00:00:00",
+                        "id": 20,
+                        "listPrice": 499,
+                        "lockStock": 0,
+                        "modifyDate": "",
+                        "onSaleDate": "2017-02-26 00:00:00",
+                        "productBrandId": 15137,
+                        "productBrandName": "LA MARTINA",
+                        "productCategroyId": 257,
+                        "productCategroyName": "手拿包",
+                        "productId": 7,
+                        "productName": "伊米妮女包 牛皮宽肩带时尚风琴褶多隔层休闲斜挎单肩包",
+                        "purchasePrice": 0,
+                        "saleAttr": [
+                          {
+                            "key": "颜色",
+                            "keyId": "3",
+                            "value": "草绿色",
+                            "valueId": "24"
+                          }
+                        ],
+                        "sellPrice": 499,
+                        "skuCoverTos": [],
+                        "sourceSaleAttr": "",
+                        "stockNum": 8
+                      }
+                    },
+                    {
+                      "num": 1,
+                      "sku": {
+                        "categoryId": 4,
+                        "cover": "/vandafile/platform/commodity/picture/201703/1488779090443_-1060959591.png",
+                        "createDate": "2017-03-06 13:45:21",
+                        "del": false,
+                        "downSaleDate": "2017-04-01 00:00:00",
+                        "id": 22,
+                        "listPrice": 3599,
+                        "lockStock": 0,
+                        "modifyDate": "",
+                        "onSaleDate": "2017-03-02 00:00:00",
+                        "productBrandId": 15489,
+                        "productBrandName": "2ND ONE",
+                        "productCategroyId": 4,
+                        "productCategroyName": "腰带",
+                        "productId": 8,
+                        "productName": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+                        "purchasePrice": 0,
+                        "saleAttr": [
+                          {
+                            "key": "颜色",
+                            "keyId": "3",
+                            "value": "深蓝色",
+                            "valueId": "32"
+                          },
+                          {
+                            "key": "尺码",
+                            "keyId": "4",
+                            "value": "30",
+                            "valueId": "58"
+                          }
+                        ],
+                        "sellPrice": 3599,
+                        "skuCoverTos": [],
+                        "sourceSaleAttr": "",
+                        "stockNum": 8
+                      }
+                    }
+                  ],
+                  "id": 8,
+                  "introduction": "",
+                  "modifierId": 2,
+                  "modifierName": "fddddddd",
+                  "modifyDate": "2017-03-07 17:05:42",
+                  "name": "套装",
+                  "num": 5,
+                  "originalPrice": 4098,
+                  "points": false,
+                  "purchaseQty": 5,
+                  "salePrice": 8000,
+                  "select": false,
+                  "time": "2017-03-06 13:58:53",
+                  "title": "套装",
+                  "typeDesc": "搭配套餐",
+                  "typeValue": "c"
+                },
+                "name": "",
+                "outSkuId": "",
+                "productId": 0,
+                "saleAttr": [],
+                "saleAttrStr": "",
+                "skuCoverTo": null,
+                "skuId": 0,
+                "skuListPrice": 8000,
+                "skuQty": 1,
+                "skuSellPrice": 8000,
+                "trackingNo": "1231231231234544"
+              },
+              "skuQty": 1
+            },
+            {
+              "id": 2,
+              "orderItemTo": {
+                "id": 4,
+                "itemStatusDesc": "已发货",
+                "marketingPackageTo": {
+                  "beginDate": "2017-03-05 00:00:00",
+                  "buyQty": 0,
+                  "coupon": false,
+                  "coverPath": "/vandafile/platform/commodity/picture/201703/1488779037619_-1060959591.png",
+                  "createDate": "2017-03-06 13:50:07",
+                  "creatorId": 1,
+                  "creatorName": "admin",
+                  "del": false,
+                  "endDate": "",
+                  "id": 1,
+                  "introduction": "",
+                  "modifierId": 0,
+                  "modifierName": "",
+                  "modifyDate": "",
+                  "name": "情人节",
+                  "num": 5,
+                  "originalPrice": 3599,
+                  "points": true,
+                  "productTo": {
+                    "attributes": "",
+                    "brandId": 15489,
+                    "brandName": "2ND ONE",
+                    "briefIn": "",
+                    "categoryId": 4,
+                    "categoryLevelName": "",
+                    "categoryName": "腰带",
+                    "cover": "/vandafile/platform/commodity/picture/201703/1488779037619_-1060959591.png",
+                    "createDate": "2017-03-06 13:45:21",
+                    "creatorName": "平台管理员",
+                    "del": 0,
+                    "delHtml": "<font color='green'>未删除</font>",
+                    "downSaleDate": "2017-04-01 00:00:00",
+                    "id": 8,
+                    "listPrice": 3599,
+                    "modifierName": "平台管理员",
+                    "modifyDate": "2017-03-06 13:45:45",
+                    "name": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+                    "onSaleDate": "2017-03-02 00:00:00",
+                    "parentBrandId": 0,
+                    "parentBrandName": "",
+                    "productBigDataTos": [],
+                    "productCoverTos": [],
+                    "productLableTos": [],
+                    "productStatusId": 2,
+                    "productStatusName": "已发布",
+                    "purchasePrice": 0,
+                    "saleAttrName": [],
+                    "sellPrice": 3599,
+                    "skuIds": "",
+                    "skus": [],
+                    "statusHtml": "<font color='green'>已发布</font>",
+                    "stockNum": 20
+                  },
+                  "purchaseQty": 1,
+                  "salePrice": 3500,
+                  "select": false,
+                  "time": "2017-03-06 13:50:07",
+                  "title": "巴玛特鳄鱼皮男士皮带自动扣不锈钢象牙贝扣头男式商务加长腰带鳄鱼纹1020",
+                  "typeDesc": "促销活动",
+                  "typeValue": "s"
+                },
+                "name": "意大利L'ALPINA袋鼠单肩包女大容量欧美牛皮女包小时尚机车包2017秋季新品包包",
+                "outSkuId": "",
+                "productId": 1,
+                "saleAttr": [
+                  {
+                    "key": "颜色",
+                    "keyId": "3",
+                    "value": "红色",
+                    "valueId": "16"
+                  },
+                  {
+                    "key": "尺码",
+                    "keyId": "4",
+                    "value": "L",
+                    "valueId": "6"
+                  }
+                ],
+                "saleAttrStr": "颜色,3,红色,16,尺码,4,L,6,",
+                "skuCoverTo": {
+                  "id": 2,
+                  "path": "/vandafile/platform/commodity/picture/201703/1488777663561_-1886042468.png",
+                  "skuId": 2
+                },
+                "skuId": 2,
+                "skuListPrice": 3500,
+                "skuQty": 1,
+                "skuSellPrice": 3500,
+                "trackingNo": "1231231231234544"
+              },
+              "skuQty": 1
+            }
+          ],
+          "orderUsersTo": {
+            "address": "333333333333333",
+            "area": "东丽区",
+            "corriere": "",
+            "name": "33",
+            "notes": "该买家没有留言",
+            "parentArea": "天津市",
+            "parentParentArea": "地区",
+            "phone": "13111111111",
+            "zipcode": ""
+          },
+          "remark": "",
+          "sellOrderNum": "",
+          "senderOrderNum": "",
+          "trackingNo": "1231231231234544"
+        }
+      ],
+      "transit": 0
+    }
+  ],
+  "sellerDiscount": 0
+}

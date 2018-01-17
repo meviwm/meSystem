@@ -1,0 +1,116 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">销售单详情 <a class="fr return_page" ng-click="returnPage()">返回</a></h1>
+	
+	<div class="contents">
+		<h2 class="products_name">2016122800106</h2>
+		
+		<div class="panel my_panel">
+			<div class="panel-heading">
+				<h3 class="panel-title fl">订单信息</h3>
+			</div>
+			<div class="panel-body">
+				<dl class="infor_list">
+					<dt>订单商品</dt>
+					<dd>
+						<table class="table my_table">
+							<thead>
+							<tr>
+								<th>商品编号</th>
+								<th>商品名称</th>
+								<th>商品图片</th>
+								<th>商品规格</th>
+								<th>商品数量</th>
+								<th>商品原价</th>
+								<th>商品活动价</th>
+								<th>总计</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1732</td>
+								<td>范思哲 腰带 黑色 V91S201 VM00046 V000</td>
+								<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+								<td>黑色 90cm</td>
+								<td>1</td>
+								<td>1290</td>
+								<td>560</td>
+								<td>¥560.00</td>
+							</tr>
+							<tr>
+								<td>1732</td>
+								<td>范思哲 腰带 黑色 V91S201 VM00046 V000</td>
+								<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+								<td>黑色 90cm</td>
+								<td>1</td>
+								<td>1290</td>
+								<td>560</td>
+								<td>¥560.00</td>
+							</tr>
+							</tbody>
+						</table>
+					</dd>
+					<dt>备注</dt>
+					<dd>撒大神大神大神</dd>
+					<dd class="mt_20">
+						<div class="tab_tit">
+							<span ng-click="selectTab('ddxq')" ng-class="{active:selectedTab=='ddxq'}">订单详情</span>
+							<span ng-click="selectTab('dkxx')" ng-class="{active:selectedTab=='dkxx'}">到款信息</span>
+							<span ng-click="selectTab('shrxx')" ng-class="{active:selectedTab=='shrxx'}">收货人信息</span>
+						</div>
+						<div class="tab_con">
+							<div class="tab_con_item" ng-show="selectedTab=='ddxq'">
+								<dl class="infor_list">
+									<dt>订单号</dt>
+									<dd>2017010400110</dd>
+									<dt>下单人昵称</dt>
+									<dd>2017010400110</dd>
+									<dt>下单时间</dt>
+									<dd>2017010400110</dd>
+									<dt>订单金额</dt>
+									<dd>2017010400110</dd>
+									<dt>支付方式</dt>
+									<dd>微信支付</dd>
+									<dt>订单状态</dt>
+									<dd>已收货</dd>
+									<dt>订单运费</dt>
+									<dd>0</dd>
+									<dt>修改时间</dt>
+									<dd>2017-01-18 02:00:00</dd>
+								</dl>
+							</div>
+							<div class="tab_con_item" ng-show="selectedTab=='dkxx'">
+								<dl class="infor_list">
+									<dt>支付方式</dt>
+									<dd>微信支付</dd>
+									<dt>支付金额</dt>
+									<dd>560</dd>
+									<dt>支付凭证号</dt>
+									<dd>5664645465161159874987926331</dd>
+									<dt>支付时间</dt>
+									<dd>2019-08-09 09:80</dd>
+								</dl>
+							</div>
+							<div class="tab_con_item" ng-show="selectedTab=='shrxx'">
+								<dl class="infor_list">
+									<dt>收货人姓名</dt>
+									<dd>王玉林</dd>
+									<dt>收货人电话</dt>
+									<dd>15669999999</dd>
+									<dt>所在地</dt>
+									<dd>四川省 锦江区 成都市</dd>
+									<dt>详细地址</dt>
+									<dd>新光华街7号航天科技大厦48楼</dd>
+								</dl>
+							</div>
+						</div>
+					</dd>
+				
+				</dl>
+			</div>
+		
+		
+		</div>
+	
+	
+	</div>
+</div>

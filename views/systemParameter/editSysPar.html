@@ -1,0 +1,95 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">码表树编辑</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 创建 -->
+		<div class="editAdmin" ng-if="state=='create'">
+			<div class="input_container">
+				<label class="input_description fl">码表名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">中文名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">码表规则:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">上传封面:</label>
+				<div class="input_box">
+					<div class="img_in"><img class="upload_img" ng-show="false" src="images/200_200.jpg" alt=""></div>
+					<p class="update_note">格式：jpg、png<br>大小：≤200kb<br>尺寸：500px*500px</p>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">码表介绍:</label>
+				<div class="input_box"><textarea></textarea></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 编辑 -->
+		<div class="editAdmin" ng-if="state=='edit'">
+			<div class="input_container">
+				<label class="input_description fl">码表名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">中文名称:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">码表规则:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">上传封面:</label>
+				<div class="input_box">
+					<div class="img_in"><img class="upload_img" ng-show="false" src="images/200_200.jpg" alt=""></div>
+					<p class="update_note">格式：jpg、png<br>大小：≤200kb<br>尺寸：500px*500px</p>
+				</div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">码表介绍:</label>
+				<div class="input_box"><textarea></textarea></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 禁用 -->
+		<div class="editAdmin" ng-if="state=='del'">
+			<p class="opt_text">是否删除该产品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 启用 -->
+		<div class="editAdmin" ng-if="state=='recover'">
+			<p class="opt_text">是否删除该产品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+		
+		<!-- 删除 -->
+		<div class="editAdmin" ng-if="state=='delete'">
+			<p class="opt_text">是否删除该产品？</p>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+	
+	</div>
+</div>

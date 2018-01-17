@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="ylmf">
+<head>
+	<meta charset="UTF-8">
+	<!-- 禁止将数字转化成拨号链接 -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>home</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="lib/bootstrap-3.3.0/css/bootstrap.css">
+	<!-- 字体图标 -->
+	<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	<!-- 滚动条插件 -->
+	<!--<link rel="stylesheet" href="lib/perfect-scrollbar/css/perfect-scrollbar.min.css">-->
+	<link rel="stylesheet" href="lib/ng-scrollbars/jquery.mCustomScrollbar.min.css">
+	
+	<!-- select -->
+	<link rel="stylesheet" href="lib/angular-ui/ui-select/select.min.css">
+	<link rel="stylesheet" href="lib/angular-ui/ui-select/select2.css">
+	
+	
+	<link id="mainCss" rel="stylesheet" href="css/style.css">
+	<!-- jquery -->
+	<script src="lib/jquery.min.js"></script>
+	
+	<!-- angularJs -->
+	<script src="lib/angularjs-1.6.1/angular.min.js"></script>
+	<script src="lib/angularjs-1.6.1/angular-animate.min.js"></script>
+	<script src="lib/angularjs-1.6.1/angular-sanitize.min.js"></script>
+	<!--<script src="lib/angularjs-1.5.8/angular.min.js"></script>-->
+	<!--<script src="lib/angularjs-1.5.8/angular-animate.min.js"></script>-->
+	<!--<script src="lib/angularjs-1.5.8/angular-sanitize.min.js"></script>-->
+	
+	
+	<!-- 滚动条插件 -->
+	<!--<script src="lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>-->
+	<!--<script src="lib/perfect-scrollbar/perfect-scrollbar.with-mousewheel.min.js"></script>-->
+	<!--<script src="lib/perfect-scrollbar/angular-perfect-scrollbar.js"></script>-->
+	<script src="lib/ng-scrollbars/jquery.mCustomScrollbar.min.js"></script>
+	<script src="lib/ng-scrollbars/jquery.mousewheel.min.js"></script>
+	<script src="lib/ng-scrollbars/scrollbars.min.js"></script>
+	
+	<!-- select -->
+	<script src="lib/angular-ui/ui-select/select.min.js"></script>
+	<!--<script src="lib/angular-ui/ui-select/select2/js/select2.js"></script>-->
+	
+	<!-- ui bootstrap;tpls包含html模板-->
+	<script src="lib/angular-ui/bootstrap-2.3.2/angular-locale_zh-cn.js"></script>
+	<script src="lib/angular-ui/bootstrap-2.3.2/ui-bootstrap-tpls-2.3.2.min.js"></script>
+	
+	<!-- angular-ui-router：路由 -->
+	<script src="lib/angular-ui/router/angular-ui-router.min.js"></script>
+	<!-- angular惰性加载js/css插件 -->
+	<script src="lib/ocLazyLoad/ocLazyLoad.min.js"></script>
+	
+	<!-- 弹窗提示 -->
+	<script src="lib/layer/layer.js"></script>
+	
+	<script src="js/main.js"></script>
+	<script src="js/uiRouter.js"></script>
+	<script src="js/service.js"></script>
+</head>
+<body>
+<div class="mainContainer pageAniM" ui-view></div>
+</body>
+</html>
+
+<!--
+
+ObjectName 			项目根目录
+  |-css 			样式文件
+	|-style.css		页面样式表，需要按页面区块写好注释
+    |-reset.css 	重置样式表，normalize.css
+  |-fonts			使用到的字体图标
+  |-images 			背景图片
+  |-update			静态页面使用的图片，背景音乐，视频等文件；正式发布的项目没有这个目录，该目录下的文件是从后台获取的
+  |-js 				页面对应的js文件，按照页面模块分文件夹存放
+  |-lib 			使用的前端插件
+  |-views 			html页面文件，按照模块分文件夹存放
+  |-index.html 		首页
+  
+-->

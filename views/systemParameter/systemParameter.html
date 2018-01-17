@@ -1,0 +1,16 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">码表</h1>
+	<div id="tree">
+		<ul ng-include="'treeTemp'">
+		
+		</ul>
+	</div>
+</div>
+<script id="treeTemp" type="text/ng-template">
+	<li ng-repeat="item in treeData">
+		<a>{{item.text}}</a>
+		<ul ng-if="item.children.length" ng-include="'treeTemp'" ng-init="treeData = item.children">
+			<li><a href=""></a></li>
+		</ul>
+	</li>
+</script>

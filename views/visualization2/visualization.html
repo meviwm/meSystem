@@ -1,0 +1,91 @@
+<div class="content_box">
+	<div class="visualization_container">
+		<div class="phone_views fl">
+			<header class="phone_header">
+				<div class="status_bar">
+					<div class="signal fl"><i></i><i></i><i></i><i></i><i></i></div>
+					<div class="charge fr"><span>69%</span><i></i></div>
+					<div class="time">08:09</div>
+				</div>
+				<div class="navigation_bar">
+					<div class="header_btn fl">
+						<a href="" class="return_prev_page">返回</a>
+					</div>
+					<div class="header_btn fr"></div>
+					<div class="header_tit">商品详情</div>
+				</div>
+			</header>
+			<div class="phone_body" ng-scrollbars ng-scrollbars-config="scrollbarsConfig" id="phoneBody">
+				<div class="phoneGoodsImg">
+					<img src="images/phone_img.jpg" alt="">
+				</div>
+				<div class="phoneGoodsInfor">
+					<h6 class="phoneGoodsTit">你是一只蜻蜓，点过我的湖心</h6>
+					<p class="phoneGoodsPrice"><span>￥</span><em>3500.00</em></p>
+				</div>
+				
+				<div class="userDefinedColumn" id="c-1" ng-class="{activeColumn:currentColumn ==-1}" ng-click="editCurrentColumn(-1,'views/visualization2/editTmp/detail/details.html')">
+				<!--<div class="userDefinedColumn activeColumn">-->
+					<div class="defaultC">
+						<p class="userDefinedColumnName">商品详情{{ColumnConViewSrc}}</p>
+						<p class="operatePrompt">点击进行编辑</p>
+					</div>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<!--<span>删除</span>-->
+							<span>添加栏目</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>
+				<div class="userDefinedColumn" ng-repeat="item in addColumnList" id="c{{item.cid}}" ng-class="{activeColumn:currentColumn == item.cid}" ng-click="editCurrentColumn(item.cid,item.editTmpSrc)">
+					<div class="defaultC" ng-include="item.conTmpSrc" onload="loadedTmp(item.editTmpSrc)">
+						<p class="userDefinedColumnName">商品详情</p>
+						<p class="operatePrompt">点击进行编辑</p>
+					</div>
+					<div class="operateBtnBox">
+						<div class="operate">
+							<span ng-click="deleteColumn(item.cid)">删除</span>
+							<span>加内容</span>
+							<span>编辑</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="allUserDefinedColumn">
+					<ul class="userDefinedColumnList">
+						<li class="userDefinedColumnItem" ng-click="addColumn('goodsList/view.html','goodsList/settingStyle.html')"><span>商品</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('productList/view.html','productList/settingStyle.html')"><span>商品列表</span></li>
+						<li class="userDefinedColumnItem" ng-click="addColumn('imgAdvertC/view.html','imgAdvertC/settingStyle.html')"><span>图片广告</span></li>
+						<!--<li class="userDefinedColumnItem" ng-click="addColumn('imgNavC/view.html','imgNavC/view.html')"><span>图片导航</span></li>-->
+						<!--<li class="userDefinedColumnItem" ng-click="addColumn('textNavC/view.html','textNavC/view.html')"><span>文本导航</span></li>-->
+						<!--<li class="userDefinedColumnItem" ng-click="addColumn('windowC/view.html','windowC/view.html')"><span>橱窗</span></li>-->
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!--<div class="arrow"></div>-->
+		<div class="edit_views_container">
+			<div class="edit_operate_region fl">
+				<div class="arrow" id="arrow">
+					<span class="arrow1"></span>
+					<span class="arrow2"></span>
+				</div>
+				<div class="editContentContainer" ng-scrollbars ng-scrollbars-config="scrollbarsConfig">
+					<div ng-include="settingColumnStyleViewSrc"></div>
+				</div>
+				
+			</div>
+			<!--栏目内容选择-->
+			<div class="edit_con_region" ng-if="editContentView">
+				<div class="conBox" ng-scrollbars ng-scrollbars-config="scrollbarsConfig">
+					<div ng-include="editContentView"></div>
+				</div>
+			</div>
+			<!--<div class="edit_views_box" ng-scrollbars ng-scrollbars-config="scrollbarsConfig">
+				
+			</div>-->
+		</div>
+	</div>
+</div>

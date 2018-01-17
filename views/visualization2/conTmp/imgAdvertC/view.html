@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="views/visualization/swiper-3.4.1.min.css">
+<script src="views/visualization/swiper-3.4.1.jquery.min.js"></script>
+<style>
+	.imgAdvertbox{width:320px;overflow:hidden;}
+	.swiper-container{}
+	.swiper-wrapper{}
+	.swiper-slide{display:block;}
+	.swiper-slide img{display:block;width:100%;}
+	
+	.imgAdvertList{}
+	.imgAdvertItem{display:block;margin:10px 0;}
+	.imgAdvertItem a{display:block;}
+	.imgAdvertItem img{display:block;width:100%;}
+	
+	
+</style>
+<div class="defaultC">
+	<p class="userDefinedColumnName">点击编辑图片广告</p>
+	<p class="operatePrompt">图片推荐宽度:640px</p>
+</div>
+<div class="imgAdvertbox">
+	<ul class="imgAdvertList">
+		<li class="imgAdvertItem"><a href=""><img src="images/phone_img.jpg" alt=""></a></li>
+		<li class="imgAdvertItem"><a href=""><img src="images/phone_img.jpg" alt=""></a></li>
+		<li class="imgAdvertItem"><a href=""><img src="images/phone_img.jpg" alt=""></a></li>
+	</ul>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<a class="swiper-slide"><img src="images/phone_img.jpg" alt=""></a>
+			<a class="swiper-slide"><img src="images/phone_img.jpg" alt=""></a>
+			<a class="swiper-slide"><img src="images/phone_img.jpg" alt=""></a>
+		</div>
+		<!-- 如果需要分页器 -->
+		<!--<div class="swiper-pagination"></div>-->
+		
+		<!-- 如果需要导航按钮 -->
+		<!--<div class="swiper-button-prev"></div>-->
+		<!--<div class="swiper-button-next"></div>-->
+		
+		<!-- 如果需要滚动条 -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+</div>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+//        direction: 'vertical',
+//        loop: false,
+
+        // 如果需要分页器
+//        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+//        nextButton: '.swiper-button-next',
+//        prevButton: '.swiper-button-prev',
+
+        // 如果需要滚动条
+        scrollbar: '.swiper-scrollbar',
+    });
+</script>

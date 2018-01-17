@@ -1,0 +1,53 @@
+<!--编辑栏目样式-->
+<div class="editColumnStyleBox">
+	<div class="c_in_c">
+		<span class="c_in_d fl">列表样式：</span>
+		<div class="c_in_b">
+			<label class="s_con_l"><input name="makeup" ng-model="makeup" ng-value="true" ng-click="setStyle('makeup',makeup)" type="radio">横向</label>
+			<label class="s_con_l"><input name="makeup" ng-model="makeup" ng-value="false" ng-click="setStyle('makeup',makeup)" type="radio">卡片式</label>
+		</div>
+	</div>
+	<div class="c_in_c">
+		<span class="c_in_d fl">显示个数：</span>
+		<div class="c_in_b">
+			<label class="s_con_l"><input name="showNum" ng-model="showNum" ng-value="6" ng-click="setStyle('showNum',6)" type="radio">6</label>
+			<label class="s_con_l"><input name="showNum" ng-model="showNum" ng-value="12" ng-click="setStyle('showNum',12)" type="radio">12</label>
+			<label class="s_con_l"><input name="showNum" ng-model="showNum" ng-value="18" ng-click="setStyle('showNum',18)" type="radio">18</label>
+		</div>
+	</div>
+	<div class="c_in_c">
+		<span class="c_in_d">显示内容：</span>
+		<div class="c_in_b">
+			<label class="hasCon"><input type="checkbox" ng-model="buyBtn" ng-click="setStyle('buyBtn',buyBtn)">显示购买按钮{{buyBtn}}</label>
+			<label class="hasCon"><input type="checkbox" ng-model="godName" ng-click="setStyle('godName',godName)">显示商品名称{{godName}}</label>
+			<label class="hasCon"><input type="checkbox" ng-model="godPrice" ng-click="setStyle('godPrice',godPrice)">显示价格{{godPrice}}</label>
+		</div>
+	</div>
+</div>
+<!--编辑栏目内容-->
+<div class="editColumnContentBox">
+	<div class="c_in_c">
+		<span class="c_in_d">选择商品：</span>
+		<div class="c_in_b">
+			<div class="addProductList">
+				<span class="delProduct">&times;</span>
+				<img src="images/200_200.jpg" alt="">
+			</div>
+			<div class="addProductList">
+				<span class="delProduct">&times;</span>
+				<img src="images/200_200.jpg" alt="">
+			</div>
+			<div class="addProductList">
+				<span class="delProduct">&times;</span>
+				<img src="images/200_200.jpg" alt="">
+			</div>
+			<div class="addProductList">
+				<span class="delProduct">&times;</span>
+				<img src="images/200_200.jpg" alt="">
+			</div>
+			<div class="addProduct" ng-click="showEditConViews('productList/editContent.html')">
+				<i class="fa fa-plus"></i>
+			</div>
+		</div>
+	</div>
+</div>

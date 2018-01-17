@@ -1,0 +1,27 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">完善销售单信息</h1></div>
+	<div class="me_modal_body">
+		
+		<!-- 新增、修改 -->
+		<div class="createAdmin" ng-if="state=='add'||state=='edit'">
+			<div class="input_container">
+				<label class="input_description fl">销售单运单号</label>
+				<div class="input_box"><input type="text" ng-model="create.userId"></div>
+			</div>
+			<div class="validate">
+				<p>不能为空</p>
+				<p>不能为空</p>
+				<p>不能为空</p>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">备注</label>
+				<div class="input_box"><textarea></textarea></div>
+			</div>
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+	
+	</div>
+</div>

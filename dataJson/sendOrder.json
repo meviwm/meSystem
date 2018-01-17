@@ -1,0 +1,159 @@
+{
+  "tectonicData": [
+    {
+      "packageName": "包裹1",
+      "packageId": "0",
+      "express": "顺丰",
+      "expressId": "000000000",
+      "expressGoods": [
+        {
+          "goodsName": "商品a",
+          "goodsPrice": "99.00",
+          "goodsNum": "3",
+          "goodsPre": "0"
+        }
+      ]
+    },
+    {
+      "packageName": "包裹2",
+      "packageId": "1",
+      "express": "顺丰",
+      "expressId": "111111111",
+      "expressGoods": [
+        {
+          "goodsName": "商品bb",
+          "goodsPrice": "99.00",
+          "goodsNum": "3",
+          "goodsPre": "0"
+        },
+        {
+          "goodsName": "商品cc",
+          "goodsPrice": "99.00",
+          "goodsNum": "3",
+          "goodsPre": "0"
+        }
+      ]
+    },
+    {
+      "packageName": "包裹3",
+      "packageId": "2",
+      "express": "顺丰",
+      "expressId": "111111111",
+      "expressGoods": [
+        {
+          "goodsName": "商品aaa",
+          "goodsPrice": "99.00",
+          "goodsNum": "3",
+          "goodsPre": "0"
+        },
+        {
+          "goodsName": "商品bbb",
+          "goodsPrice": "99.00",
+          "goodsNum": "3",
+          "goodsPre": "0"
+        },
+        {
+          "goodsName": "商品ccc",
+          "goodsPrice": "99.00",
+          "goodsNum": "3",
+          "goodsPre": "0"
+        }
+      ]
+    }
+  ],
+  "realData": {
+    "couponDetails": [],
+    "couponMoney": 0,
+    "createDate": "2017-02-13 16:31:47",
+    "creator": "111",
+    "creatorName": "111",
+    "deliveryTypeDesc": "只工作日送货",
+    "deliveryTypeValue": 1,
+    "freightPrice": 300,
+    "id": 1,
+    "integral": 0,
+    "invoiceInfo": "否",
+    "modifier": "111",
+    "modifierName": "111",
+    "modifyDate": "2017-02-13 16:31:47",
+    "orderItems": [
+      {
+        "itemStatus": "",
+        "name": "test",
+        "outSkuId": "",
+        "productId": 1,
+        "saleAttr": [
+          {
+            "key": "颜色",
+            "keyId": "2",
+            "value": "红色",
+            "valueId": "4"
+          },
+          {
+            "key": "尺码",
+            "keyId": "3",
+            "value": "1",
+            "valueId": "8"
+          }
+        ],
+        "skuCoverTo": null,
+        "skuId": 1,
+        "skuListPrice": 200,
+        "skuQty": 1,
+        "skuSellPrice": 200,
+        "trackingNo": ""
+      }
+    ],
+    "orderLogs": [
+      {
+        "id": 1,
+        "operationDate": "2017-02-06 16:18:55",
+        "operatorId": 1,
+        "operatorMetaValue": "user",
+        "operatorName": "111",
+        "orderId": 1,
+        "orderNumber": "2017021300004",
+        "orderStatusDesc": "待支付",
+        "orderStatusValue": 1
+      }
+    ],
+    "orderNumber": "2017021300004",
+    "orderPayment": 300,
+    "orderStatusDesc": "已发货",
+    "orderStatusValue": 3,
+    "orderTotalPrice": 300,
+    "orderTotalSellPrice": 300,
+    "orderUserTo": {
+      "address": "aaaaaaaaaaaaaaaaa",
+      "area": "裕华区",
+      "corriere": "",
+      "name": "aaa",
+      "notes": "",
+      "parentArea": "石家庄市",
+      "parentParentArea": "河北省",
+      "phone": "13122222222",
+      "zipcode": "123456"
+    },
+    "paymentMethodDesc": "线下付款",
+    "paymentMethodValue": 1,
+    "realReceives": [
+      {
+        "amount": 200,
+        "id": 1,
+        "orderNumber": "2017021300004",
+        "payDate": "2017-02-06 10:55:08",
+        "payPerson": "aaa",
+        "payTypeDesc": "线下付款",
+        "payTypeValue": 1,
+        "proof": "a",
+        "remark": "",
+        "userId": 1,
+        "userName": "2222",
+        "userType": "user"
+      }
+    ],
+    "remark": "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+    "sellOrders": [],
+    "sellerDiscount": 300
+  }
+}

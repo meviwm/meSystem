@@ -1,0 +1,86 @@
+<!--编辑栏目样式-->
+<div class="editColumnStyleBox">
+	<div class="c_in_c">
+		<span class="c_in_d fl">显示方式：</span>
+		<div class="c_in_b">
+			<label class="s_con_l"><input name="makeup" ng-model="makeup" ng-value="true" ng-click="" type="radio">轮播</label>
+			<label class="s_con_l"><input name="makeup" ng-model="makeup" ng-value="false" ng-click="" type="radio">分开显示</label>
+		</div>
+	</div>
+	<div class="c_in_c">
+		<span class="c_in_d fl">图片大小：</span>
+		<div class="c_in_b">
+			<label class="hasCon"><input type="radio" name="hasMinImg" ng-model="hasMinImg" ng-click="">大图</label>
+			<label class="hasCon"><input type="radio" name="hasMinImg" ng-model="hasMinImg" ng-click="">小图</label>
+		</div>
+	</div>
+</div>
+<!--编辑栏目内容-->
+<div class="editColumnContentBox">
+	
+	<div class="addImgAdvertList clearfix">
+		<div class="imgAdvBox fl">
+			<img src="images/200_200.jpg" alt="">
+			<div class="againImg"><span>更换图片</span><input type="file"></div>
+		</div>
+		<div class="imgAdvertCon">
+			<div class="input_container">
+				<label class="input_description fl">标题:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">链接:</label>
+				<div class="input_box">
+					<p class="advertHref">设置点击后跳转到的页面链接</p>
+				</div>
+			</div>
+		</div>
+		<div class="delCurrentAdvert"><i class="fa fa-trash-o"></i></div>
+	</div>
+	
+	<div class="addImgAdvertList clearfix">
+		<div class="imgAdvBox fl">
+			<img src="images/200_200.jpg" alt="">
+			<div class="againImg"><span>更换图片</span><input type="file"></div>
+		</div>
+		<div class="imgAdvertCon">
+			<div class="input_container">
+				<label class="input_description fl">标题:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">链接:</label>
+				<div class="input_box">
+					<p class="advertHref">设置点击后跳转到的页面链接</p>
+				</div>
+			</div>
+		</div>
+		<div class="delCurrentAdvert"><i class="fa fa-trash-o"></i></div>
+	</div>
+	
+	<div class="addImgAdvertList clearfix">
+		<div class="imgAdvBox fl">
+			<img src="images/200_200.jpg" alt="">
+			<div class="againImg"><span>更换图片</span><input type="file"></div>
+		</div>
+		<div class="imgAdvertCon">
+			<div class="input_container">
+				<label class="input_description fl">标题:</label>
+				<div class="input_box"><input type="text"></div>
+			</div>
+			<div class="input_container">
+				<label class="input_description fl">链接:</label>
+				<div class="input_box">
+					<p class="advertHref">设置点击后跳转到的页面链接</p>
+				</div>
+			</div>
+		</div>
+		<div class="delCurrentAdvert"><i class="fa fa-trash-o"></i></div>
+	</div>
+	
+	<div class="addImgAdvert" ng-click="showEditConViews('imgAdvertC/editContent.html')">
+		<i class="fa fa-plus"></i>
+		添加一个图片广告
+	</div>
+	
+</div>

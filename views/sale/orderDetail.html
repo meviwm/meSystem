@@ -1,0 +1,483 @@
+<div class="content_box" ng-scrollbars>
+	<h1 class="page_tit">订单详情 <a class="fr return_page" ng-click="returnPage()">返回</a></h1>
+	<div class="contents">
+			<!--切换显示-->
+			<div class="tab_tit">
+				<span ng-click="selectTab('ddxq')" ng-class="{active:selectedTab=='ddxq'}">订单详情</span>
+				<span ng-click="selectTab('xsdxq')" ng-class="{active:selectedTab=='xsdxq'}">销售单详情</span>
+				<span ng-click="selectTab('fhdxq')" ng-class="{active:selectedTab=='fhdxq'}">发货单详情</span>
+				<!--<span ng-click="selectTab('shrxx')" ng-class="{active:selectedTab=='shrxx'}">收货人信息</span>-->
+				<span ng-click="selectTab('dkdxx')" ng-class="{active:selectedTab=='dkdxx'}">到款单信息</span>
+				<span ng-click="selectTab('ddrz')" ng-class="{active:selectedTab=='ddrz'}">订单日志</span>
+			</div>
+
+			<div class="tab_con mb_15 order_tab">
+				<!--订单信息-->
+				<div class="tab_con_item clearfix" ng-show="selectedTab=='ddxq'">
+					<dl class="infor_list">
+						<dt>订单信息</dt>
+						<dd class="border_l">
+							<div class="cloumn_three clo-4 fl">
+								<p class="info_box"><span class="info_name fl">订单编号：</span><span class="infor_val">{{orders.orderNumber}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{orders.creator}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">下单时间：</span><span class="infor_val">{{orders.createDate}}</span>
+								</p>
+							</div>
+							<div class="cloumn_three clo-4 fl">
+								<p class="info_box"><span class="info_name fl">订单货款金额：</span><span class="infor_val">{{orders.orderTotalSellPrice}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">商家优惠金额：</span><span class="infor_val">{{orders.sellerDiscount}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">使用积分数量：</span><span class="infor_val">{{orders.integral}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">优惠劵抵消金额：</span><span class="infor_val">{{orders.couponMoney}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">运费：</span><span class="infor_val">{{orders.freightPrice}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">用户应付金额：</span><span class="infor_val">{{orders.orderPayment}}</span>
+								</p>
+							</div>
+							<div class="cloumn_three clo-4 fl">
+								<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{orders.paymentMethodDesc}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">送货类型：</span><span class="infor_val">{{orders.deliveryTypeDesc}}</span>
+								</p>
+							</div>
+							<div class="cloumn_three clo-4 fl">
+								<p class="info_box"><span class="info_name fl">订单状态：</span><span class="infor_val">{{orders.orderStatusDesc}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">修改时间：</span><span class="infor_val">{{orders.modifyDate}}</span>
+								</p>
+							</div>
+						</dd>
+
+						<dt class="border_t">收货人信息</dt>
+						<dd class="border_t border_l">
+							<div class="cloumn_three clo-4 fl">
+								<p class="info_box"><span class="info_name fl">收货人姓名：</span><span class="infor_val">{{orders.orderUserTo.name}}</span></p>
+								<p class="info_box"><span class="info_name fl">收货人电话：</span><span class="infor_val">{{orders.orderUserTo.phone}}</span></p>
+								<p class="info_box"><span class="info_name fl">所在地：</span><span class="infor_val">{{orders.orderUserTo.parentParentArea}}&nbsp{{orders.orderUserTo.parentArea}}&nbsp{{orders.orderUserTo.area}}</span></p>
+								<p class="info_box"><span class="info_name fl">详细地址：</span><span class="infor_val">{{orders.orderUserTo.address}}</span></p>
+								<p class="info_box"><span class="info_name fl">邮编：</span><span class="infor_val">{{orders.orderUserTo.zipcode}}</span></p>
+							</div>
+						</dd>
+
+						<dt class="border_t">订单商品</dt>
+						<dd class="border_t border_l">
+							<table class="table my_table">
+								<thead>
+								<tr>
+									<th>商品编号</th>
+									<th>商品名称</th>
+									<th>商品图片</th>
+									<th>商品规格</th>
+									<th>商品数量</th>
+									<th>商品原价</th>
+									<th>商品活动价</th>
+									<th>总计</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr ng-repeat="items in orders.orderItems">
+									<td>{{items.productId}}</td>
+									<td>{{items.name}}</td>
+									<td><img src="{{items.skuCoverTo.path}}" alt="" class="order_goods_img"></td>
+									<td><span ng-repeat="attr in items.saleAttr">{{attr.value}}&nbsp</span></td>
+									<td>{{items.skuQty}}</td>
+									<td>{{items.skuListPrice}}</td>
+									<td>{{items.skuSellPrice}}</td>
+									<td>{{items.skuQty*items.skuSellPrice | currency}}</td>
+								</tr>
+								<tr>
+									<td>1732</td>
+									<td>范思哲 腰带 黑色 V91S201 VM00046 V000</td>
+									<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+									<td>黑色 90cm</td>
+									<td>1</td>
+									<td>1290</td>
+									<td>560</td>
+									<td>¥560.00</td>
+								</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+				</div>
+				<!--销售单信息-->
+				<div class="tab_con_item" ng-show="selectedTab=='xsdxq'">
+					<dl class="infor_list" ng-repeat="sellOrders in orders.sellOrders">
+						<dt>销售单信息</dt>
+						<dd class="border_l">
+							<div class="cloumn_three clo-3 fl">
+								<p class="info_box"><span class="info_name fl">销售单号：</span><span class="infor_val">{{sellOrders.sellOrderNumber}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{sellOrders.operatorName}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">销售时间：</span><span class="infor_val">{{sellOrders.createDate}}</span>
+								</p>
+							</div>
+							<div class="cloumn_three clo-3 fl">
+								<p class="info_box"><span class="info_name fl">销售单金额：</span><span class="infor_val">{{sellOrders.amount}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">运费：</span><span class="infor_val">{{sellOrders.transit}}</span>
+								</p>
+								<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{sellOrders.paymentMethodDesc}}</span>
+								</p>
+							</div>
+							<div class="cloumn_three clo-3 fl">
+								<p class="info_box"><span class="info_name fl">备注：</span><span class="infor_val">{{sellOrders.comment}}</span>
+								</p>
+							</div>
+						</dd>
+						<dt class="border_t">销售单商品</dt>
+						<dd class="border_t border_l">
+							<table class="table my_table">
+								<thead>
+								<tr>
+									<th>商品ID(skuId)</th>
+									<th>商品名字</th>
+									<th>商品数量</th>
+									<th>标出价格</th>
+									<th>销售价格</th>
+									<th>销售属性</th>
+									<th>商品图片</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr ng-repeat="sellOrderItems in sellOrders.sellOrderItems">
+									<td>{{sellOrderItems.productId}}({{sellOrderItems.skuId}})</td>
+									<td>{{sellOrderItems.name}}</td>
+									<td>{{sellOrderItems.skuQty}}</td>
+									<td>{{sellOrderItems.skuListPrice}}</td>
+									<td>{{sellOrderItems.skuSellPrice}}</td>
+									<td><span ng-repeat="attr in sellOrderItems.saleAttr">{{attr.value}}&nbsp</span></td>
+									<td><img src="{{sellOrderItems.skuCoverTo.path}}" alt="" class="order_goods_img"></td>
+								</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+				</div>
+				<!--发货单信息-->
+				<div class="tab_con_item clearfix" ng-show="selectedTab=='fhdxq'">
+					<table class="table my_table mb_15" ng-repeat="sellOrders in orders.sellOrders">
+						<thead>
+						<tr>
+							<th>发货单号</th>
+							<th>运单号</th>
+							<th>销售单号</th>
+							<th>承运商名字</th>
+							<th>创建人账号</th>
+							<th>支付时间</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="sendOrder in sellOrders.sendOrder">
+							<td>{{sendOrder.senderOrderNum}}</td>
+							<td>{{sendOrder.trackingNo}}</td>
+							<td>{{sendOrder.sellOrderId}}</td>
+							<td>{{sendOrder.corriereType}}</td>
+							<td>{{sendOrder.operatorName}}</td>
+							<td>{{sendOrder.createDate}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--到款单信息-->
+				<div class="tab_con_item" ng-show="selectedTab=='dkdxx'">
+					<table class="table my_table">
+						<thead>
+						<tr>
+							<th>ID</th>
+							<th>订单流水号</th>
+							<th>到款凭证</th>
+							<th>到款金额</th>
+							<th>支付方式</th>
+							<th>（ID）-操作人名字-（操作人类型）</th>
+							<th>支付人账号</th>
+							<th>支付时间</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="realReceive in orders.realReceives">
+							<td>{{realReceive.id}}</td>
+							<td>{{realReceive.orderNumber}}</td>
+							<td>{{realReceive.proof}}</td>
+							<td>{{realReceive.amount}}</td>
+							<td>{{realReceive.payTypeDesc}}</td>
+							<td>（{{realReceive.userId}}）-{{realReceive.userName}}-（{{realReceive.userType}}）</td>
+							<td>{{realReceive.payPerson}}</td>
+							<td>{{realReceive.payDate}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--订单日志-->
+				<div class="tab_con_item" ng-show="selectedTab=='ddrz'">
+					<table class="table my_table">
+						<thead>
+						<tr>
+							<th>订单流水号</th>
+							<th>状态描述</th>
+							<th>（ID）-操作人名字-（操作人类型）</th>
+							<th>操作时间</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="orderLog in orders.orderLogs">
+							<td>{{orderLog.orderNumber}}</td>
+							<td>{{orderLog.orderStatusDesc}}</td>
+							<td>（{{orderLog.operatorId}}）-{{orderLog.operatorName}}-（{{orderLog.operatorMetaValue}}）</td>
+							<td>{{orderLog.operationDate}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+
+
+
+		<!--整个地显示-->
+		<!--订单详情-->
+		<div class="product_attr_item clearfix">
+			<div class="product_attr_key fl">订单详情</div>
+			<div class="product_attr_val clearfix">
+				<dl class="infor_list">
+					<dt>订单信息</dt>
+					<dd class="border_l">
+						<div class="cloumn_three clo-4 fl">
+							<p class="info_box"><span class="info_name fl">订单编号：</span><span class="infor_val">{{orders.orderNumber}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{orders.creator}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">下单时间：</span><span class="infor_val">{{orders.createDate}}</span>
+							</p>
+						</div>
+						<div class="cloumn_three clo-4 fl">
+							<p class="info_box"><span class="info_name fl">订单货款金额：</span><span class="infor_val">{{orders.orderTotalSellPrice}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">商家优惠金额：</span><span class="infor_val">{{orders.sellerDiscount}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">使用积分数量：</span><span class="infor_val">{{orders.integral}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">优惠劵抵消金额：</span><span class="infor_val">{{orders.couponMoney}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">运费：</span><span class="infor_val">{{orders.freightPrice}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">用户应付金额：</span><span class="infor_val">{{orders.orderPayment}}</span>
+							</p>
+						</div>
+						<div class="cloumn_three clo-4 fl">
+							<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{orders.paymentMethodDesc}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">送货类型：</span><span class="infor_val">{{orders.deliveryTypeDesc}}</span>
+							</p>
+						</div>
+						<div class="cloumn_three clo-4 fl">
+							<p class="info_box"><span class="info_name fl">订单状态：</span><span class="infor_val">{{orders.orderStatusDesc}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">修改时间：</span><span class="infor_val">{{orders.modifyDate}}</span>
+							</p>
+						</div>
+					</dd>
+
+					<dt class="border_t">收货人信息</dt>
+					<dd class="border_t border_l">
+						<div class="cloumn_three clo-4 fl">
+							<p class="info_box"><span class="info_name fl">收货人姓名：</span><span class="infor_val">{{orders.orderUserTo.name}}</span></p>
+							<p class="info_box"><span class="info_name fl">收货人电话：</span><span class="infor_val">{{orders.orderUserTo.phone}}</span></p>
+							<p class="info_box"><span class="info_name fl">所在地：</span><span class="infor_val">{{orders.orderUserTo.parentParentArea}}&nbsp{{orders.orderUserTo.parentArea}}&nbsp{{orders.orderUserTo.area}}</span></p>
+							<p class="info_box"><span class="info_name fl">详细地址：</span><span class="infor_val">{{orders.orderUserTo.address}}</span></p>
+							<p class="info_box"><span class="info_name fl">邮编：</span><span class="infor_val">{{orders.orderUserTo.zipcode}}</span></p>
+						</div>
+					</dd>
+
+					<dt class="border_t">订单商品</dt>
+					<dd class="border_t border_l">
+						<table class="table my_table">
+							<thead>
+							<tr>
+								<th>商品编号</th>
+								<th>商品名称</th>
+								<th>商品图片</th>
+								<th>商品规格</th>
+								<th>商品数量</th>
+								<th>商品原价</th>
+								<th>商品活动价</th>
+								<th>总计</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr ng-repeat="items in orders.orderItems">
+								<td>{{items.productId}}</td>
+								<td>{{items.name}}</td>
+								<td><img src="{{items.skuCoverTo.path}}" alt="" class="order_goods_img"></td>
+								<td><span ng-repeat="attr in items.saleAttr">{{attr.value}}&nbsp</span></td>
+								<td>{{items.skuQty}}</td>
+								<td>{{items.skuListPrice}}</td>
+								<td>{{items.skuSellPrice}}</td>
+								<td>{{items.skuQty*items.skuSellPrice | currency}}</td>
+							</tr>
+							<tr>
+								<td>1732</td>
+								<td>范思哲 腰带 黑色 V91S201 VM00046 V000</td>
+								<td><img src="images/200_200.jpg" alt="" class="order_goods_img"></td>
+								<td>黑色 90cm</td>
+								<td>1</td>
+								<td>1290</td>
+								<td>560</td>
+								<td>¥560.00</td>
+							</tr>
+							</tbody>
+						</table>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!--销售单详情-->
+		<div class="product_attr_item clearfix">
+			<div class="product_attr_key fl">销售单详情</div>
+			<div class="product_attr_val clearfix">
+				<dl class="infor_list" ng-repeat="sellOrders in orders.sellOrders">
+					<dt>销售单信息</dt>
+					<dd class="border_l">
+						<div class="cloumn_three clo-3 fl">
+							<p class="info_box"><span class="info_name fl">销售单号：</span><span class="infor_val">{{sellOrders.sellOrderNumber}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">下单人昵称：</span><span class="infor_val">{{sellOrders.operatorName}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">销售时间：</span><span class="infor_val">{{sellOrders.createDate}}</span>
+							</p>
+						</div>
+						<div class="cloumn_three clo-3 fl">
+							<p class="info_box"><span class="info_name fl">销售单金额：</span><span class="infor_val">{{sellOrders.amount}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">运费：</span><span class="infor_val">{{sellOrders.transit}}</span>
+							</p>
+							<p class="info_box"><span class="info_name fl">支付方式：</span><span class="infor_val">{{sellOrders.paymentMethodDesc}}</span>
+							</p>
+						</div>
+						<div class="cloumn_three clo-3 fl">
+							<p class="info_box"><span class="info_name fl">备注：</span><span class="infor_val">{{sellOrders.comment}}</span>
+							</p>
+						</div>
+					</dd>
+					<dt class="border_t">销售单商品</dt>
+					<dd class="border_t border_l">
+						<table class="table my_table">
+							<thead>
+							<tr>
+								<th>商品ID(skuId)</th>
+								<th>商品名字</th>
+								<th>商品数量</th>
+								<th>标出价格</th>
+								<th>销售价格</th>
+								<th>销售属性</th>
+								<th>商品图片</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr ng-repeat="sellOrderItems in sellOrders.sellOrderItems">
+								<td>{{sellOrderItems.productId}}({{sellOrderItems.skuId}})</td>
+								<td>{{sellOrderItems.name}}</td>
+								<td>{{sellOrderItems.skuQty}}</td>
+								<td>{{sellOrderItems.skuListPrice}}</td>
+								<td>{{sellOrderItems.skuSellPrice}}</td>
+								<td><span ng-repeat="attr in sellOrderItems.saleAttr">{{attr.value}}&nbsp</span></td>
+								<td><img src="{{sellOrderItems.skuCoverTo.path}}" alt="" class="order_goods_img"></td>
+							</tr>
+							</tbody>
+						</table>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!--发货单详情-->
+		<div class="product_attr_item clearfix">
+			<div class="product_attr_key fl">发货单详情</div>
+			<div class="product_attr_val clearfix">
+				<table class="table my_table mb_15" ng-repeat="sellOrders in orders.sellOrders">
+					<thead>
+					<tr>
+						<th>发货单号</th>
+						<th>运单号</th>
+						<th>销售单号</th>
+						<th>承运商名字</th>
+						<th>创建人账号</th>
+						<th>支付时间</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="sendOrder in sellOrders.sendOrder">
+						<td>{{sendOrder.senderOrderNum}}</td>
+						<td>{{sendOrder.trackingNo}}</td>
+						<td>{{sendOrder.sellOrderId}}</td>
+						<td>{{sendOrder.corriereType}}</td>
+						<td>{{sendOrder.operatorName}}</td>
+						<td>{{sendOrder.createDate}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!--到款单详情-->
+		<div class="product_attr_item clearfix">
+			<div class="product_attr_key fl">到款单信息</div>
+			<div class="product_attr_val clearfix">
+				<table class="table my_table">
+					<thead>
+					<tr>
+						<th>ID</th>
+						<th>订单ID</th>
+						<th>（ID）-操作人名字-（操作人类型）</th>
+						<th>操作时间</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="realReceive in orders.realReceives">
+						<td>{{realReceive.id}}</td>
+						<td>{{realReceive.orderNumber}}</td>
+						<td>（{{realReceive.userId}}）-{{realReceive.userName}}-（{{realReceive.userType}}）</td>
+						<td>{{realReceive.payDate}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!--订单日志-->
+		<div class="product_attr_item clearfix">
+			<div class="product_attr_key fl">订单日志</div>
+			<div class="product_attr_val clearfix">
+				<table class="table my_table">
+					<thead>
+					<tr>
+						<th>订单流水号</th>
+						<th>状态描述</th>
+						<th>（ID）-操作人名字-（操作人类型）</th>
+						<th>操作时间</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="orderLog in orders.orderLogs">
+						<td>{{orderLog.orderNumber}}</td>
+						<td>{{orderLog.orderStatusDesc}}</td>
+						<td>（{{orderLog.operatorId}}）-{{orderLog.operatorName}}-（{{orderLog.operatorMetaValue}}）</td>
+						<td>{{orderLog.operationDate}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>

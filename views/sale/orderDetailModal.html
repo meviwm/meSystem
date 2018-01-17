@@ -1,0 +1,353 @@
+<div class="me_modal_box">
+	<div class="me_modal_header"><h1 class="me_modal_tit">取消订单</h1></div>
+	<div class="me_modal_body" style="height:500px;" ng-scrollbars>
+
+		<!-- 取消订单 -->
+		<div class="createAdmin" ng-if="state=='del'">
+			<div class="input_container">
+				<label class="input_description fl">取消原因</label>
+				<div class="input_box">
+					<textarea></textarea>
+				</div>
+			</div>
+
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+
+		<!-- 填写发货单 -->
+		<div class="editAdmin" ng-if="state=='send'">
+			<div class="orderGoods">
+				<p>发货商品3；已选0</p>
+				<table class="table my_table">
+					<thead>
+					<tr>
+						<th><input type="checkbox"></th>
+						<th>商品</th>
+						<th>数量</th>
+						<th>物流单号</th>
+						<th>状态</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">多发萨达萨达ddddd</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>2</td>
+						<td>322659656232</td>
+						<td>已揽件</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">多发萨达萨达ddddd</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>2</td>
+						<td>322659655654832</td>
+						<td>已收货</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>
+							<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+							<div class="goods_info">
+								<a class="goods_name">多发萨达萨达ddddd</a>
+								<p class="goods_style">尺码：32；颜色：橙色；</p>
+							</div>
+						</td>
+						<td>2</td>
+						<td>322659655654832</td>
+						<td>已发货</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="row">
+				<div class="input_container col-lg-6 col-sm-6 col-md-6">
+					<label class="input_description fl">物流公司</label>
+					<div class="input_box">
+						<select>
+							<option>顺丰</option>
+							<option>申通</option>
+							<option>韵达</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input_container col-lg-6 col-sm-6 col-md-6">
+					<label class="input_description fl">发货单号</label>
+					<div class="input_box">
+						<input type="text">
+					</div>
+				</div>
+			</div>
+			<p class="info_box division"><span class="info_name fl">收货信息：</span><span class="infor_val">四川省 成都市 武侯区 高新区益州大道中段1800号 天府软件园G区, 李伟, 18980887997</span>
+			</p>
+
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+		</div>
+
+		<!--修改发货单-->
+		<div class="editAdmin" ng-if="state=='editSend'">
+			<!--<table class="table my_table">
+				<thead>
+				<tr>
+					<th>包裹</th>
+					<th>商品</th>
+					<th>价格</th>
+					<th>数量</th>
+					<th>优惠</th>
+					<th>小计</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="package" rowspan="3">包裹1</td>
+					<td>韵达快递 运单号：000000</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">物流公司</label>
+							<div class="input_box">
+								<select>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">发货单号</label>
+							<div class="input_box">
+								<input type="text">
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				<tr>
+					<td class="package" rowspan="3">包裹1</td>
+					<td>韵达快递 运单号：000000</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">物流公司</label>
+							<div class="input_box">
+								<select>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">发货单号</label>
+							<div class="input_box">
+								<input type="text">
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				<tr>
+					<td class="package" rowspan="4">包裹2</td>
+					<td>韵达快递 运单号：000000</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">物流公司</label>
+							<div class="input_box">
+								<select>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">发货单号</label>
+							<div class="input_box">
+								<input type="text">
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">多发萨达萨达ddddd</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>99.99</td>
+					<td>2</td>
+					<td>-</td>
+					<td>999.99</td>
+				</tr>
+				</tbody>
+			</table>-->
+
+			<table class="table my_table orderTable">
+				<thead>
+				<tr>
+					<th>包裹</th>
+					<th>商品</th>
+					<th>价格</th>
+					<th>数量</th>
+					<th>优惠</th>
+					<th>小计</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="packageItem" ng-repeat-start="item in sandOrders.tectonicData">
+					<td class="package" rowspan="{{item.expressGoods.length+1}}">{{item.packageName}}</td>
+					<td>{{item.express}} 运单号：{{item.expressId}}</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">物流公司</label>
+							<div class="input_box">
+								<select>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+									<option>顺丰</option>
+								</select>
+							</div>
+						</div>
+					</td>
+					<td colspan="2">
+						<div class="input_container">
+							<label class="input_description fl">发货单号</label>
+							<div class="input_box">
+								<input type="text">
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="goodsItem" ng-class="{even:!$even,odd:!$odd}" ng-repeat="GItem in item.expressGoods">
+					<td>
+						<a class="fl"><img class="order_goods_img fl" src="images/200_200.jpg" alt=""></a>
+						<div class="goods_info">
+							<a class="goods_name">{{GItem.goodsName}}</a>
+							<p class="goods_style">尺码：32；颜色：橙色；</p>
+						</div>
+					</td>
+					<td>{{GItem.goodsPrice}}</td>
+					<td>{{GItem.goodsNum}}</td>
+					<td>{{(GItem.goodsPre==0?'-':GItem.goodsPre)}}</td>
+					<td>999.99</td>
+				</tr>
+				<tr class="engItem" ng-repeat-end>
+					<td colspan="6"></td>
+				</tr>
+				</tbody>
+			</table>
+			
+			<div class="btn_box">
+				<button class="me-btn" ng-click="saveAdmin(create)">保存</button>
+				<button class="me-btn" ng-click="closeModal()">取消</button>
+			</div>
+			
+		</div>
+		
+	</div>
+</div>

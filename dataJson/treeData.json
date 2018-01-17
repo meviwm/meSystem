@@ -1,0 +1,35 @@
+[
+  {
+    "text":"用户管理",
+    "state":{"opened":true},
+    "children":[
+      {"text":"前端用户管理"},
+      {"text":"后台用户管理"}
+    ]
+  },
+  {
+    "text":"站内信息",
+    "state":{"opened":true},
+    "children":[
+      {"text":"栏目管理"},
+      {"text":"图文信息管理"},
+      {"text":"投票管理"},
+      {"text":"提问管理"}
+    ]
+  },
+  {
+    "text":"角色权限",
+    "state":{"opened":true},
+    "children":[
+      {
+        "text":"角色管理",
+        "state":{"opened":true},
+        "children":[
+          {"text":"内容审核"},
+          {"text":"内容编辑"}
+        ]
+      },
+      {"text":"权限管理"}
+    ]
+  }
+]
